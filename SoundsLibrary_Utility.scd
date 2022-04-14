@@ -1,15 +1,15 @@
 // Tidal-DrumMachines SoundsFolders
 // https://club.tidalcycles.org/t/a-huge-drum-machine-library-for-tidal-71-drum-machines/3408
-// a minimal exploration from the sclang side:
+// a minimal exploration from the sclang side from Julian Rohrhuber:
 
 SuperDirt.start;
 SuperDirt.default = ~dirt;
 
-~path = "/Users/xon/L4LSoundsDataBase/DrumMachines";
+~path = "/Users/xon/tidal-drum-machines/machines";
 
 ~dirt.soundLibrary.loadSoundFiles(~path ++ "/*/*");
 
-p = pathMatch("/Users/xon/L4LSoundsDataBase/DrumMachines/*/*");
+p = pathMatch("/Users/xon/tidal-drum-machines/machines/*/*");
 
 x = p.collect { |x| x.split($/).drop(-1).last.asSymbol };
 
@@ -39,8 +39,8 @@ Tdef(\x, {
 
 
 
-( // Initialize to batch process the change of file names
-~soundsFolder = "/Users/xon/L4LSoundsDataBase/DrumMachines/"; // Define the path of the sounds Folder
+( // 1 Initialize to batch process the change of file names
+~soundsFolder = "/Users/xon/tidal-drum-machines/machines/"; // Define the path of the sounds Folder
 ~soundsFiles = pathMatch(~soundsFolder++"*/*/*");
 ~soundsFolderP = ~soundsFiles.collect { |i, id| PathName(i) };
 ~soundsFolder0 = ~soundsFiles.collect { |i, id| ~soundsFolderP[id].pathOnly };
@@ -55,7 +55,7 @@ s.reboot;
 )
 
 
-( // Read the files with old names
+( // 2 Read the files with old names
 { var sf;
 	~soundsFiles.do { |i, id| i.postln;
 		sf = SoundFile.new; sf.openRead(i); // optional ?
@@ -72,12 +72,13 @@ s.reboot;
 )
 
 
+// Check if all info are loaded in buffers
 s.cachedBuffersDo({ |i| i.asString.postln; })
 s.cachedBuffersDo({ |i| (i.asString.split($,)[1]).postln; })
 s.cachedBuffersDo({ |i| if (i.asString.split($,)[1] == "nil", {" ".postln; "Not Updated Buffer ->".postln; i.postln; " ".postln; i.updateInfo({ |i| (i.asString ++ " -> updated").postln}); }); });
 
 
-( // Write the files with new names including the name of the folders
+( // 3 Write the files with new names including the name of the folders
 {
 	~soundsFiles.do { |i, id| // i.postln;
 		~soundsBuffers[id].write(~soundsNewNames[id], sampleFormat: "int16" /*"int24"*/ ,completionMessage:{ |i| ("-> File written :"+i).postln;});
@@ -87,7 +88,7 @@ s.cachedBuffersDo({ |i| if (i.asString.split($,)[1] == "nil", {" ".postln; "Not 
 )
 
 
-( // Delete the files with old names
+( // 4 Delete the files with old names
 {
 	~soundsFiles.do { |i, id|
 		i.postln;
@@ -101,9 +102,44 @@ s.cachedBuffersDo({ |i| if (i.asString.split($,)[1] == "nil", {" ".postln; "Not 
 
 
 
+// Nb of files per category (Bass Drum, Snare Drum...)
+~soundsCategories = ~soundsNewNames.collect { |i| i.split($/)[6].split($-)[1] }; ~soundsCategories.cs
+~soundsCategories.do { |i, id| if (i.size==0, {~soundsNewNames[id]}).postln; } // allows to detect a small misprint with 2 "--" in names
+// see 3 files in oberheimdmx--perc folder "/Users/xon/tidal-drum-machines/machines/OberheimDMX/oberheimdmx--perc/Timbale H.wav"
+
+~categories = ~soundsCategories.as(Set).as(Array); // Names of categories
+~categoriesSizes = ~categories.collect {|i, id| ~soundsCategories.occurrencesOf(i) } // Nb of sound files per category
+~categories.do {|i, id| (i + " ->" + ~categoriesSizes[id]).postln }; // Names of categories with Nb of sound files - not sorted XXX
+~categoriesOrder = ~categoriesSizes.copy.order.reverse;
+~categoriesOrder.do { |i, ib| (~categories[i]+'-->'+~categoriesSizes[i]).postln }; // Names of categories with sizes - sorted XXX
+
+sd --> 446
+bd --> 420
+perc --> 330
+lt --> 150
+misc --> 130
+ht --> 123
+hh --> 120
+mt --> 113
+oh --> 102
+cr --> 100
+rim --> 59
+rd --> 59
+cp --> 57
+sh --> 52
+cb --> 49
+tb --> 32
+fx --> 6
+
+
+
+
+
+
+
 // Explore sounds Folder 1
 ~soundsFolder = "/Users/xon/Desktop/_Sounds2021C/";
-~soundsFolder = "/Users/xon/L4LSoundsDataBase/DrumMachines/"; ~soundsFolderPath = PathName.new(~soundsFolder); // Define your sounds Folder
+~soundsFolder = "/Users/xon/tidal-drum-machines/machines/"; ~soundsFolderPath = PathName.new(~soundsFolder); // Define your sounds Folder
 
 // https://www.geeksforgeeks.org/du-command-linux-examples/
 // https://en.wikipedia.org/wiki/Du_(Unix)
@@ -117,12 +153,12 @@ s.cachedBuffersDo({ |i| if (i.asString.split($,)[1] == "nil", {" ".postln; "Not 
 
 
 // Explore sounds Folder 2
-~soundsFolderSizes = ~soundsFolderPath.folders.collect { |i| i.folders.collect { |a| a.files.size }.sum }.sum; // 2350 sound files
+~soundsFolderPath.folders.collect { |i| i.folders.collect { |a| a.files.size }.sum }.sum; // 2350 sound files
 ~soundsFolderSizes = ~soundsFolderPath.folders.collect { |i| i.folders.collect { |a| a.files.size }.sum }; // Nb of sound files per folder
-~soundsFolderNames = ~soundsFolderPath.folders.collect { |i| i.folderName }; ~soundsFolderNames.cs; // Noms des dossiers
-~soundsFolderNames.do { |i, ib| (i+'-->'+~soundsFolderSizes[ib]).postln } // Noms des dossiers avec leurs tailles - non trié XXX
-~soundsFolderSizesS = ~soundsFolderSizes.copy.order.reverse // trie de l'ordre des dossiers en fonction du nombre de fichiers sons
-~soundsFolderSizesS.do { |i, ib| (~soundsFolderNames[i]+'-->'+~soundsFolderSizes[i]).postln } // Noms des dossiers avec leurs tailles - trié XXX
+~soundsFolderNames = ~soundsFolderPath.folders.collect { |i| i.folderName }; ~soundsFolderNames.cs; // Names of folders
+~soundsFolderNames.do { |i, ib| (i+'-->'+~soundsFolderSizes[ib]).postln } // Names of folders with Nb of sound files - not sorted XXX
+~soundsFolderOrder = ~soundsFolderSizes.copy.order.reverse;
+~soundsFolderOrder.do { |i, ib| (~soundsFolderNames[i]+'-->'+~soundsFolderSizes[i]).postln } // Names of folders with sizes - sorted XXX
 
 
 [ "AJKPercusyn", "AkaiLinn", "AkaiMPC60", "AkaiXR10", "AlesisHR16", "AlesisSR16", "BossDR110", "BossDR220", "BossDR55", "BossDR550", "CasioRZ1", "CasioSK1", "CasioVL1", "DoepferMS404", "EmuDrumulator", "EmuModular", "EmuSP12", "KorgDDM110", "KorgKPR77", "KorgKR55", "KorgKRZ", "KorgM1", "KorgMinipops", "KorgPoly800", "KorgT3", "Linn9000", "LinnDrum", "LinnLM1", "LinnLM2", "MFB512", "MPC1000", "MoogConcertMateMG1", "OberheimDMX", "RhodesPolaris", "RhythmAce", "RolandCompurhythm1000", "RolandCompurhythm78", "RolandCompurhythm8000", "RolandD110", "RolandD70", "RolandDDR30", "RolandJD990", "RolandMC202", "RolandMC303", "RolandMT32", "RolandR8", "RolandS50", "RolandSH09", "RolandSystem100", "RolandTR505", "RolandTR606", "RolandTR626", "RolandTR707", "RolandTR727", "RolandTR808", "RolandTR909", "SakataDPM48", "SequentialCircuitsDrumtracks", "SequentialCircuitsTom", "SergeModular", "SimmonsSDS400", "SimmonsSDS5", "SoundmastersR88", "UnivoxMicroRhythmer12", "ViscoSpaceDrum", "XdrumLM8953", "YamahaRM50", "YamahaRX21", "YamahaRX5", "YamahaRY30", "YamahaTG33" ]
