@@ -1,17 +1,17 @@
-# Sounds library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) TO COME SOON
+# A sounds library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) TO COME SOON
 
 This sounds library comes from a huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse). I am currently adapting it to sort and fit it for the sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life).
 
 ### List of drum machines
 
-See the full list of drum machines [here](/machines).
+See the full list of drum machines [here](/DrumMachines).
 
 ---
 
 
 ### Drum names abbreviations:
 | Drum                                | Abbreviation |  Nb  |
-|-------------------------------------|--------------|------|
+|-------------------------------------|:------------:|-----:|
 | Bass drum, Kick drum                | bd           |  420 |
 | Snare drum                          | sd           |  446 |
 | Rimshot                             | rim          |   59 |
@@ -29,4 +29,4 @@ See the full list of drum machines [here](/machines).
 | Other percussions                   | perc         |  330 |
 | Miscellaneous samples               | misc         |  130 |
 | Effects                             | fx           |    6 |
-| Total                               |              | 2348 |
+| `Total`                             |              | `2348` |
