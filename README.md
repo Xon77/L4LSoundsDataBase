@@ -1,9 +1,10 @@
-# A sounds library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) 
-# TO COME SOON
+# A sounds library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) to come soon!
 
 This sounds library comes from a huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse). I am currently trying to adapt, sort and fit it for the sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life).
 
-In file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), you find the way I've explored this collection of sound files and how to batch process the change of file names.
+In file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), you find the way I've explored this collection of sound files [by category](/SoundsLibrary_Utility.scd#L107-L116) or [by machine](/SoundsLibrary_Utility.scd#L158-L163), or how to batch process the change of file names [here](/SoundsLibrary_Utility.scd#L43-L100).
+
+
 
 ---
 
@@ -14,17 +15,18 @@ See the original full list of drum machines [here](/DrumMachines).
 ---
 
 
-### Drum categories abbreviations:
+### Drum categories abbreviations
+
 | Drum categories                     | Abbreviation |  Nb  |
 |-------------------------------------|:------------:|-----:|
 | Bass drum, Kick drum                | bd           |  420 |
 | Snare drum                          | sd           |  446 |
 | Other percussions                   | perc         |  330 |
-| Closed hi-hat                       | hh           |  120 |
-| Open hi-hat                         | oh           |  102 |
 | High tom                            | ht           |  123 |
 | Medium tom                          | mt           |  113 |
 | Low tom                             | lt           |  150 |
+| Closed hi-hat                       | hh           |  120 |
+| Open hi-hat                         | oh           |  102 |
 | Crash                               | cr           |  100 |
 | Rimshot                             | rim          |   59 |
 | Clap                                | cp           |   57 |
