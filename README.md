@@ -2,7 +2,7 @@
 
 This sounds library comes from a huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse). I am currently trying to adapt, sort and fit it for the sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life).
 
-In file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), you find the way I've explored this collection of sound files [by category](/SoundsLibrary_Utility.scd#L107-L116) or [by machine](/SoundsLibrary_Utility.scd#L158-L163), or how to batch process the change of file names [here](/SoundsLibrary_Utility.scd#L47-L100).
+In file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), you find the way I've explored this collection of sound files [by category](/SoundsLibrary_Utility.scd#L107-L116) or [by machine](/SoundsLibrary_Utility.scd#L158-L163), or how to batch process the change of file names [here](/SoundsLibrary_Utility.scd#L43-L100).
 
 
 
