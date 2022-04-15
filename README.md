@@ -1,38 +1,37 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2638
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\sa240\partightenfactor0
+# A sounds library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) 
+# TO COME SOON
 
-\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-# Sounds library example sorted for [Live 4 Life project]((https://\
-github.com/Xon77/Live4Life))\
-This sounds library comes from a huge collection of [Drum Machines]\
-(https://github.com/ritchse/tidal-drum-machines/tree/main/machines)\
-for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse).\
-I am currently adapting it to sort and fit it for the sound\
-performance tool [Live 4 Life](https://github.com/Xon77/Live4Life).\
----\
-## Drum names abbreviations:\
-| Drum                                | Abbreviation |\
-|-------------------------------------|--------------|\
-| Bass drum, Kick drum\
-| Snare drum\
-| Rimshot\
-| Clap\
-| Closed hi-hat\
-| Open hi-hat\
-| Crash\
-| Ride\
-| Shakers (and maracas, cabasas, etc)\
-| High tom\
-| Medium tom\
-| Low tom\
-| Cowbell\
-| Tambourine\
-| Other percussions\
-| Miscellaneous samples\
-| Effects\
-| bd | | sd | | rim | |cp | |hh | |oh | |cr | |rd | |sh | |ht | |mt | |lt | |cb | |tb | | perc | | misc | | fx |}
+This sounds library comes from a huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse). I am currently trying to adapt, sort and fit it for the sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life).
+
+In file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), you find the way I've explored this collection of sound files and how to batch process the change of file names.
+
+---
+
+### List of drum machines
+
+See the original full list of drum machines [here](/DrumMachines).
+
+---
+
+
+### Drum categories abbreviations:
+| Drum categories                     | Abbreviation |  Nb  |
+|-------------------------------------|:------------:|-----:|
+| Bass drum, Kick drum                | bd           |  420 |
+| Snare drum                          | sd           |  446 |
+| Other percussions                   | perc         |  330 |
+| Closed hi-hat                       | hh           |  120 |
+| Open hi-hat                         | oh           |  102 |
+| High tom                            | ht           |  123 |
+| Medium tom                          | mt           |  113 |
+| Low tom                             | lt           |  150 |
+| Crash                               | cr           |  100 |
+| Rimshot                             | rim          |   59 |
+| Clap                                | cp           |   57 |
+| Ride                                | rd           |   59 |
+| Shakers (and maracas, cabasas, etc) | sh           |   52 |
+| Cowbell                             | cb           |   49 |
+| Tambourine                          | tb           |   32 |
+| Miscellaneous samples               | misc         |  130 |
+| Effects                             | fx           |    6 |
+| `Total`                             |              | `2348` |
