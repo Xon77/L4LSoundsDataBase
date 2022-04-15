@@ -13,7 +13,7 @@ See the full list of drum machines [here](/machines).
 | Drum                                | Abbreviation |  Nb  |
 |-------------------------------------|--------------|------|
 | Bass drum, Kick drum                | bd           |  420 |
-| Snare drum                          | sd           |  446
+| Snare drum                          | sd           |  446 |
 | Rimshot                             | rim          |   59 |
 | Clap                                | cp           |   57 |
 | Closed hi-hat                       | hh           |  120 |
@@ -29,4 +29,5 @@ See the full list of drum machines [here](/machines).
 | Other percussions                   | perc         |  330 |
 | Miscellaneous samples               | misc         |  130 |
 | Effects                             | fx           |    6 |
-| Total                                              | 2348 |
+|-------------------------------------|--------------|------|
+| Total                               |              | 2348 |
