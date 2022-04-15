@@ -38,6 +38,7 @@ Tdef(\x, {
 
 
 
+_____________________________________________________________________________________________________________________
 
 ( // 1 Initialize to batch process the change of file names
 ~soundsFolder = "/Users/xon/tidal-drum-machines/machines/"; // Define the path of the sounds Folder
@@ -101,11 +102,12 @@ s.cachedBuffersDo({ |i| if (i.asString.split($,)[1] == "nil", {" ".postln; "Not 
 
 
 
+_____________________________________________________________________________________________________________________
 
 // Nb of files per category (Bass Drum, Snare Drum...)
 ~soundsCategories = ~soundsNewNames.collect { |i| i.split($/)[6].split($-)[1] }; ~soundsCategories.cs
 ~soundsCategories.do { |i, id| if (i.size==0, {~soundsNewNames[id]}).postln; } // allows to detect a small misprint with 2 "--" in names
-// see 3 files in oberheimdmx--perc folder "/Users/xon/tidal-drum-machines/machines/OberheimDMX/oberheimdmx--perc/Timbale H.wav"
+// see 3 files in oberheimdmx--perc folder https://github.com/ritchse/tidal-drum-machines/tree/main/machines/OberheimDMX/oberheimdmx--perc/Timbale H.wav
 
 ~categories = ~soundsCategories.as(Set).as(Array); // Names of categories
 ~categoriesSizes = ~categories.collect {|i, id| ~soundsCategories.occurrencesOf(i) } // Nb of sound files per category
@@ -135,7 +137,7 @@ fx --> 6
 
 
 
-
+_____________________________________________________________________________________________________________________
 
 // Explore sounds Folder 1
 ~soundsFolder = "/Users/xon/Desktop/_Sounds2021C/";
