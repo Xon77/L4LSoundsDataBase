@@ -29,5 +29,4 @@ See the full list of drum machines [here](/machines).
 | Other percussions                   | perc         |  330 |
 | Miscellaneous samples               | misc         |  130 |
 | Effects                             | fx           |    6 |
-|-------------------------------------|--------------|------|
 | Total                               |              | 2348 |
