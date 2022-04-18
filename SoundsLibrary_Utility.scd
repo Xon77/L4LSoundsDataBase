@@ -38,28 +38,34 @@ Tdef(\x, {
 
 
 
+
 _____________________________________________________________________________________________________________________
 
-( // 1 Initialize to batch process the change of file names
-~soundsFolder = "/Users/xon/tidal-drum-machines/machines/"; // Define the path of the sounds Folder
+( // 1 -> Initialize to batch rename sound files by adding the categories to names of sound files
+// First make a copy of the sounds folder to be changed
+// And change a small misprint with 2 "--" in names -> see 3 files in oberheimdmx--perc folder https://github.com/ritchse/tidal-drum-machines/tree/main/machines/OberheimDMX/oberheimdmx--perc/Timbale H.wav
+~soundsFolder = "/Users/xon/tidal-drum-machines2/machines/"; // Define the path of the sounds Folder
 ~soundsFiles = pathMatch(~soundsFolder++"*/*/*");
 ~soundsFolderP = ~soundsFiles.collect { |i, id| PathName(i) };
 ~soundsFolder0 = ~soundsFiles.collect { |i, id| ~soundsFolderP[id].pathOnly };
 ~soundsFolder1 = ~soundsFiles.collect { |i, id| i.split($/)[5] };
 ~soundsFolder2 = ~soundsFiles.collect { |i, id| i.split($/)[6].split($-)[1] };
 ~soundsFolder3 = ~soundsFiles.collect { |i, id| i.split($/).last };
-~soundsNewNames = ~soundsFiles.collect { |i, id| (~soundsFolder0[id] ++ ~soundsFolder1[id] ++ "-" ++ ~soundsFolder2[id] ++ "-" ++ ~soundsFolder3[id]) };
+~soundsNewNames = ~soundsFiles.collect { |i, id|
+	(~soundsFolder0[id] ++ ~soundsFolder1[id] ++ "-" ++ ~soundsFolder2[id] ++ "-" ++ ~soundsFolder3[id]).replace(" ", ""); }; // replace added to get files without spaces to be able to move them afterwards
 ~soundsBuffers = 0 !~soundsFiles.size;
+~soundsSampleFormats = 0 !~soundsFiles.size;
 s.options.numBuffers_(100000);
 s.reboot;
 ~soundsFiles.cs;
 )
 
 
-( // 2 Read the files with old names
+( // 2 -> Read the files with old names
 { var sf;
 	~soundsFiles.do { |i, id| i.postln;
 		sf = SoundFile.new; sf.openRead(i); // optional ?
+		~soundsSampleFormats[id] = sf.sampleFormat;
 		~soundsBuffers[id] = Buffer.read(s, i);
 		sf.close; // optional ?
 		0.001.wait;
@@ -74,22 +80,39 @@ s.reboot;
 
 
 // Check if all info are loaded in buffers
-s.cachedBuffersDo({ |i| i.asString.postln; })
-s.cachedBuffersDo({ |i| (i.asString.split($,)[1]).postln; })
+s.cachedBuffersDo({ |i, id| (id.asString + i.asString).postln; });
+s.cachedBuffersDo({ |i| (i.asString.split($,)[1]).postln; });
 s.cachedBuffersDo({ |i| if (i.asString.split($,)[1] == "nil", {" ".postln; "Not Updated Buffer ->".postln; i.postln; " ".postln; i.updateInfo({ |i| (i.asString ++ " -> updated").postln}); }); });
 
 
-( // 3 Write the files with new names including the name of the folders
+// Files with a different sample rate than 44.1Khz
+s.cachedBuffersDo({ |i| if ((i.asString.split($,)[3]).asInteger != 44100, {i.asString.postln}) }); // lists the files with a different sample rate than 44.1Khz
+s.cachedBuffersDo({ |i| if ((i.asString.split($,)[4]).asInteger != 44100, {i.asString.split($,)[4].split($/)[6].postln}) }); // lists the sub-categories with files with a different sample rate than 44.1Khz
+
+~categoriesWithSRDiff = List.new;
+s.cachedBuffersDo({ |i| if ((i.asString.split($,)[3]).asInteger != 44100, {~categoriesWithSRDiff.add(i.asString.split($,)[4].split($/)[5])}) }); // lists the categories with files with a different sample rate than 44.1Khz
+~categoriesWithSRDiff = ~categoriesWithSRDiff.as(Set).as(Array); // lists the categories with files with a different sample rate than 44.1Khz -> [ "YamahaRX5"@32Khz, "RolandD110"@39,1Khz, "RolandTR505"@22Khz, "KorgT3"@25Khz, "XdrumLM8953@33Khz or 50Khz"
+
+
+// Files with a different bit depth than 16
+~soundsSampleFormats.do { |i, id| if (i != "int16", {~soundsBuffers[id].postln}) };
+
+~categoriesWithBitsDiff = List.new;
+~soundsSampleFormats.do { |i, id| if (i != "int16", {~categoriesWithBitsDiff.add(~soundsBuffers[id].asString.split($,)[4].split($/)[5])}) };
+~categoriesWithBitsDiff = ~categoriesWithBitsDiff.as(Set).as(Array); // lists the categories with files with a different bit depth than 16 -> [ LinnLM1 @24, RolandTR808 (@24 for the 3 first files in CP) , RolandTR909 (@24 for most files), LinnLM2 @24 ]
+
+
+( // 3 -> Write the files with new names including the name of the folders
 {
 	~soundsFiles.do { |i, id| // i.postln;
-		~soundsBuffers[id].write(~soundsNewNames[id], sampleFormat: "int16" /*"int24"*/ ,completionMessage:{ |i| ("-> File written :"+i).postln;});
+		~soundsBuffers[id].write(~soundsNewNames[id], sampleFormat: ~soundsSampleFormats[id] /*"int16"*/ /*"int24"*/, completionMessage:{ |i| ("-> File written :"+i).postln;});
 		0.001.wait;
 	};
 }.fork;
 )
 
 
-( // 4 Delete the files with old names
+( // 4 -> Delete the files with old names
 {
 	~soundsFiles.do { |i, id|
 		i.postln;
@@ -102,18 +125,19 @@ s.cachedBuffersDo({ |i| if (i.asString.split($,)[1] == "nil", {" ".postln; "Not 
 
 
 
+
 _____________________________________________________________________________________________________________________
 
 // Nb of files per category (Bass Drum, Snare Drum...)
-~soundsCategories = ~soundsNewNames.collect { |i| i.split($/)[6].split($-)[1] }; ~soundsCategories.cs
-~soundsCategories.do { |i, id| if (i.size==0, {~soundsNewNames[id]}).postln; } // allows to detect a small misprint with 2 "--" in names
+~soundsCategories = ~soundsNewNames.collect { |i| i.split($/)[6].split($-)[1] }; ~soundsCategories.cs;
+~soundsCategories.do { |i, id| if (i.size==0, {~soundsNewNames[id]}).postln; }; // allows to detect a small misprint with 2 "--" in names
 // see 3 files in oberheimdmx--perc folder https://github.com/ritchse/tidal-drum-machines/tree/main/machines/OberheimDMX/oberheimdmx--perc/Timbale H.wav
 
 ~categories = ~soundsCategories.as(Set).as(Array); // Names of categories
-~categoriesSizes = ~categories.collect {|i, id| ~soundsCategories.occurrencesOf(i) } // Nb of sound files per category
+~categoriesSizes = ~categories.collect {|i, id| ~soundsCategories.occurrencesOf(i) }; // Nb of sound files per category
 ~categories.do {|i, id| (i + " ->" + ~categoriesSizes[id]).postln }; // Names of categories with Nb of sound files - not sorted XXX
 ~categoriesOrder = ~categoriesSizes.copy.order.reverse;
-~categoriesOrder.do { |i, ib| (~categories[i]+'-->'+~categoriesSizes[i]).postln }; // Names of categories with sizes - sorted XXX
+~categoriesOrder.do { |i, id| (~categories[i]+'-->'+~categoriesSizes[i]).postln }; // Names of categories with Nb of sound files - sorted XXX
 
 sd --> 446
 bd --> 420
@@ -139,28 +163,59 @@ fx --> 6
 
 _____________________________________________________________________________________________________________________
 
-// Explore sounds Folder 1
-~soundsFolder = "/Users/xon/Desktop/_Sounds2021C/";
+// ("pwd").unixCmd;
+// ("ls").unixCmd;
+// ("cd /Users/xon/Desktop/").unixCmd; ("ls").unixCmd; // does not work ?
+
+// Put and sort remaned sound files into specific categories
+
+// 1 - First create a folder with categories
+~categoriesS = ~categories.asString.replace("[", "{"); ~categoriesS = ~categoriesS.asString.replace("]", "}"); ~categoriesS = ~categoriesS.asString.replace(" ", "");
+// mkdir -p Niveau1/{Niveau2a,Niveau2b}
+// Change "FolderSorted" with the desired folder name
+("mkdir -p" + Platform.userHomeDir ++ "/Desktop/FolderSorted/"++~categoriesS).unixCmd;
+
+// 2 - Move files into specific categories
+~soundsFolder = "/Users/xon/tidal-drum-machines2/machines/"; // Define the path of the modified sounds folder
+~soundsFiles = pathMatch(~soundsFolder++"*/*/*");
+(
+{
+	~soundsFiles.do { |i, id| var unixString;
+		var cat = (~soundsBuffers[id].asString.split($,)[4].split($/)[6].split($-)[1]);
+		unixString = ("mv" + i + Platform.userHomeDir ++ "/Desktop/FolderSorted/" ++ cat ++ "/");
+		unixString.unixCmd; unixString.postln;
+		// ex in terminal : mv /Users/xon/tidal-drum-machines2/machines/AJKPercusyn/ajkpercusyn-bd/AJKPercusyn-bd-Bassdrum.wav /Users/xon/Desktop/FolderSorted/bd/
+		0.001.wait;
+}}.fork;
+)
+
+
+
+
+
+_____________________________________________________________________________________________________________________
+
+// Explore sounds Folder (Global)
 ~soundsFolder = "/Users/xon/tidal-drum-machines/machines/"; ~soundsFolderPath = PathName.new(~soundsFolder); // Define your sounds Folder
 
 // https://www.geeksforgeeks.org/du-command-linux-examples/
 // https://en.wikipedia.org/wiki/Du_(Unix)
 // du (abbreviated from disk usage) is a standard Unix program used to estimate file space usage—space used under a particular directory or files on a file system.
-~listingSoundFolders = ("du -m -L" + ~soundsFolder +" | sort -nr").unixCmdGetStdOut; // Listing de la taille des dossiers sons
-~listingSoundFolders = ("du -m -d 1 -L" + ~soundsFolder +" | sort -nr").unixCmdGetStdOut; // only first directories
-~listingSoundFolders = ("du -h -L" + ~soundsFolder +" | sort -nr").unixCmdGetStdOut;
+~listingSoundFolders = ("du -m -L" + ~soundsFolder + " | sort -nr").unixCmdGetStdOut; // Listing de la taille des dossiers sons
+~listingSoundFolders = ("du -m -d 1 -L" + ~soundsFolder + " | sort -nr").unixCmdGetStdOut; // only first directories
+~listingSoundFolders = ("du -h -L" + ~soundsFolder + " | sort -nr").unixCmdGetStdOut;
 
-~soundsFolderPath.deepFiles.cs
-~soundsFolderPath.dumpTree
+~soundsFolderPath.deepFiles.cs;
+~soundsFolderPath.dumpTree;
 
 
-// Explore sounds Folder 2
+// Explore sounds Folder 2 by Drum machines
 ~soundsFolderPath.folders.collect { |i| i.folders.collect { |a| a.files.size }.sum }.sum; // 2350 sound files
 ~soundsFolderSizes = ~soundsFolderPath.folders.collect { |i| i.folders.collect { |a| a.files.size }.sum }; // Nb of sound files per folder
 ~soundsFolderNames = ~soundsFolderPath.folders.collect { |i| i.folderName }; ~soundsFolderNames.cs; // Names of folders
-~soundsFolderNames.do { |i, ib| (i+'-->'+~soundsFolderSizes[ib]).postln } // Names of folders with Nb of sound files - not sorted XXX
+~soundsFolderNames.do { |i, id| (i+'-->'+~soundsFolderSizes[id]).postln }; // Names of folders with Nb of sound files - not sorted XXX
 ~soundsFolderOrder = ~soundsFolderSizes.copy.order.reverse;
-~soundsFolderOrder.do { |i, ib| (~soundsFolderNames[i]+'-->'+~soundsFolderSizes[i]).postln } // Names of folders with sizes - sorted XXX
+~soundsFolderOrder.do { |i, id| (~soundsFolderNames[i]+'-->'+~soundsFolderSizes[i]).postln }; // Names of folders with Nb of sound files - sorted XXX
 
 
 [ "AJKPercusyn", "AkaiLinn", "AkaiMPC60", "AkaiXR10", "AlesisHR16", "AlesisSR16", "BossDR110", "BossDR220", "BossDR55", "BossDR550", "CasioRZ1", "CasioSK1", "CasioVL1", "DoepferMS404", "EmuDrumulator", "EmuModular", "EmuSP12", "KorgDDM110", "KorgKPR77", "KorgKR55", "KorgKRZ", "KorgM1", "KorgMinipops", "KorgPoly800", "KorgT3", "Linn9000", "LinnDrum", "LinnLM1", "LinnLM2", "MFB512", "MPC1000", "MoogConcertMateMG1", "OberheimDMX", "RhodesPolaris", "RhythmAce", "RolandCompurhythm1000", "RolandCompurhythm78", "RolandCompurhythm8000", "RolandD110", "RolandD70", "RolandDDR30", "RolandJD990", "RolandMC202", "RolandMC303", "RolandMT32", "RolandR8", "RolandS50", "RolandSH09", "RolandSystem100", "RolandTR505", "RolandTR606", "RolandTR626", "RolandTR707", "RolandTR727", "RolandTR808", "RolandTR909", "SakataDPM48", "SequentialCircuitsDrumtracks", "SequentialCircuitsTom", "SergeModular", "SimmonsSDS400", "SimmonsSDS5", "SoundmastersR88", "UnivoxMicroRhythmer12", "ViscoSpaceDrum", "XdrumLM8953", "YamahaRM50", "YamahaRX21", "YamahaRX5", "YamahaRY30", "YamahaTG33" ]
