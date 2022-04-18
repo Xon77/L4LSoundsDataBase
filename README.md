@@ -19,10 +19,10 @@ See the original full list of drum machines [here](/DrumMachines).
 
 ### Drum categories abbreviations
 
-| Drum categories                     | Abbreviation |  Nb  |
+| Drum categories                     | Abbreviation (old->new) |  Nb of files  |
 |-------------------------------------|:------------:|-----:|
-| Bass drum, Kick drum                | bd           |  420 |
-| Snare drum                          | sd           |  446 |
+| Bass drum, Kick drum                | bd -> DB          |  420 |
+| Snare drum                          | sd -> SB          |  446 |
 | Other percussions                   | perc         |  330 |
 | High tom                            | ht           |  123 |
 | Medium tom                          | mt           |  113 |
