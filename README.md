@@ -22,20 +22,20 @@ See the original full list of drum machines [here](/DrumMachines).
 | Drum categories                     | Abbreviation (old->new) |  Nb of files  |
 |-------------------------------------|:------------:|-----:|
 | Bass drum, Kick drum                | bd -> DB          |  420 |
-| Snare drum                          | sd -> SB          |  446 |
-| Other percussions                   | perc         |  330 |
-| High tom                            | ht           |  123 |
-| Medium tom                          | mt           |  113 |
-| Low tom                             | lt           |  150 |
-| Closed hi-hat                       | hh           |  120 |
-| Open hi-hat                         | oh           |  102 |
-| Crash                               | cr           |  100 |
-| Rimshot                             | rim          |   59 |
-| Clap                                | cp           |   57 |
-| Ride                                | rd           |   59 |
-| Shakers (and maracas, cabasas, etc) | sh           |   52 |
-| Cowbell                             | cb           |   49 |
-| Tambourine                          | tb           |   32 |
-| Miscellaneous samples               | misc         |  130 |
-| Effects                             | fx           |    6 |
+| Snare drum                          | sd -> DS          |  446 |
+| Other percussions                   | perc -> DP         |  330 |
+| High tom                            | ht -> DV           |  123 |
+| Medium tom                          | mt -> DU           |  113 |
+| Low tom                             | lt -> DT           |  150 |
+| Closed hi-hat                       | hh -> DH           |  120 |
+| Open hi-hat                         | oh -> DO           |  102 |
+| Crash                               | cr -> DA           |  100 |
+| Rimshot                             | rim -> DR          |   59 |
+| Clap                                | cp -> DC           |   57 |
+| Ride                                | rd -> DI           |   59 |
+| Shakers (and maracas, cabasas, etc) | sh -> DK           |   52 |
+| Cowbell                             | cb -> DE           |   49 |
+| Tambourine                          | tb -> DU           |   32 |
+| Miscellaneous samples               | misc -> DM         |  130 |
+| Effects                             | fx -> DX           |    6 |
 | `Total`                             |              | `2348` |
