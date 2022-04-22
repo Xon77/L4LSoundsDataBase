@@ -19,10 +19,10 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 See the original full list of drum machines [here](https://github.com/Xon77/tidal-drum-machines/tree/main/machines), which has been resorted by category [here](/DrumMachines) thanks to code links above.
 
 As you can see below, each name of sounds folders should be ideally formatted and classified by 2 letters:
-* the first letter `D` to identify this collection of drum machines
-* the second letter to identify a category, colour or register within this collection.
+* the first letter `D` to identify this collection of drum machines,
+* the second letter to identify another category, colour or register within this collection.
 
-This formatting allows to new gatherings and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this collection, or e.g. `B` to gather bass and kick drums with other similar sounds or associations.
+This formatting allows new gatherings and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this collection, or e.g. `B` to gather bass and kick drums with other similar sounds or associations to come.
 
 
 ---
