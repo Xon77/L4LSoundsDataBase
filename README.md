@@ -20,7 +20,7 @@ See the original full list of drum machines [here](https://github.com/Xon77/tida
 
 ---
 
-### Building a sound library with category associations
+### Building a sound library with groups or links
 
 As you can see below, each name of sounds folders should be ideally formatted and classified by 2 letters:
 * the first letter `D` to identify a specific collection, in this case, drum machines,
