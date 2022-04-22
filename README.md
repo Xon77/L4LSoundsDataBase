@@ -25,7 +25,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 	
 	This formatting allows in the tool to have new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this total collection of drums, or e.g. `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
 
-2. Since I try to build sound folders with a minimum of 10 or 20 and a maximum of 100 or 200 sounds in order that the buffer module is both playable and diverse, some drum categories, like `B Bass drum` `C Snare drum` and `L Other percussions`, have been splitted here in 3 by alphabetical name of drum machines: A to R, Roland, S to Yamaha, where Roland has its specific folder due to the huge number of sounds present in this category.
+2. Since I try to build sound folders with a minimum of 10 or 20 and a maximum of 100 or 200 sounds in order that the buffer module is both playable and diverse, some drum categories, like `B Bass drum` `C Snare drum` and `L Other percussions`, have been splitted here in 3 by alphabetical name of drum machines (*A to R*, *Roland*, *S to Yamaha*), where *Roland* has its specific folder due to the huge number of sounds present in this category.
 
 3. The content of each sound folder should be also ideally formatted in a specific way, e.g. from low to high pitches, although it has not yet been taken into consideration here, since I kept the original sort.
 
