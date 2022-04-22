@@ -135,29 +135,56 @@ ________________________________________________________________________________
 
 ~categories = ~soundsCategories.as(Set).as(Array); // Names of categories
 ~categoriesSizes = ~categories.collect {|i, id| ~soundsCategories.occurrencesOf(i) }; // Nb of sound files per category
-~categories.do {|i, id| (i + " ->" + ~categoriesSizes[id]).postln }; // Names of categories with Nb of sound files - not sorted XXX
+
+// New categories sorted "according to me" by category, color, register (low->high)
+~newCategories = ["DM", "DL", "DB", "DE", "DR", "DN", "DX", "DK", "DZ", "DQ", "DP", "DS", "DD", "DO", "DF", "DC", "DI"];
+
+// Names of categories with Nb of sound files - not sorted XXX
+~categories.do {|i, id| (~newCategories[id] + i + "-->" + ~categoriesSizes[id]).postln };
+
+// Names of categories with Nb of sound files - sorted by Nb of soundfiles XXX
 ~categoriesOrder = ~categoriesSizes.copy.order.reverse;
-~categoriesOrder.do { |i, id| (~categories[i]+'-->'+~categoriesSizes[i]).postln }; // Names of categories with Nb of sound files - sorted XXX
+~categoriesOrder.do { |i, id| (~newCategories[i] + ~categories[i]+'-->'+~categoriesSizes[i]).postln };
 
-~newCategories = ["DE", "DP", "DB", "DU", "DB", "DI"];
+DC sd --> 446
+DB bd --> 420
+DL perc --> 330
+DD lt --> 150
+DZ misc --> 130
+DF ht --> 123
+DO hh --> 120
+DE mt --> 113
+DP oh --> 102
+DQ cr --> 100
+DI rim --> 59
+DR rd --> 59
+DK cp --> 57
+DS sh --> 52
+DM cb --> 49
+DN tb --> 32
+DX fx --> 6
 
-DS   -> sd --> 446
-DB   -> bd --> 420
-DP   -> perc --> 330
-DT   -> lt --> 150
-DM   -> misc --> 130
-DS   -> ht --> 123
-DS   -> hh --> 120
-DS   -> mt --> 113
-DS   -> oh --> 102
-DS   -> cr --> 100
-DS   -> rim --> 59
-DS   -> rd --> 59
-DS   -> cp --> 57
-DS   -> sh --> 52
-DS   -> cb --> 49
-DS   -> tb --> 32
-DS   -> fx --> 6
+// Names of categories with Nb of sound files - sorted by names of ~newCategories XXX
+~categoriesOrder2 = ~newCategories.copy.order;
+~categoriesOrder2.do { |i, id| (~newCategories[i] + ~categories[i]+'-->'+~categoriesSizes[i]).postln };
+
+DB bd --> 420
+DC sd --> 446
+DD lt --> 150
+DE mt --> 113
+DF ht --> 123
+DI rim --> 59
+DK cp --> 57
+DL perc --> 330
+DM cb --> 49
+DN tb --> 32
+DO hh --> 120
+DP oh --> 102
+DQ cr --> 100
+DR rd --> 59
+DS sh --> 52
+DX fx --> 6
+DZ misc --> 130
 
 
 
