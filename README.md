@@ -28,11 +28,11 @@ This formatting allows in the tool new gatherings and categories between folders
 ---
 
 
-### Drum categories abbreviations sorted by names of new abbreviations
+### Drum groups, categories and  abbreviations sorted by Folder names
 
-| Drum categories                     | Abbreviation (old->new) |  Nb of files  |
+| Drum groups and categories                     | Abbreviation |  Nb of files  |
 |-------------------------------------|:------------|-----:|
-| Bass drum, Kick drum                | bd -> DB          |  420 |
+| B - Bass drum, Kick drum                | bd          |  420 |
 | Snare drum                          | sd -> DC          |  446 |
 | Low tom                             | lt -> DD           |  150 |
 | Medium tom                          | mt -> DE           |  113 |
