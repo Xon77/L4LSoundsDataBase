@@ -65,7 +65,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 
 ### Credits
 
-[Renzo Torr](https://github.com/ritchse) for its huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines)
+[Renzo Torr](https://github.com/ritchse) for its huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines).
 
 ---
 
@@ -85,6 +85,6 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 
 ---
 
-### Licence
+### License
 
 GPL 3
