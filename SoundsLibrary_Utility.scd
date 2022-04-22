@@ -128,7 +128,7 @@ s.cachedBuffersDo({ |i| if ((i.asString.split($,)[3]).asInteger != 44100, {~cate
 
 _____________________________________________________________________________________________________________________
 
-// Nb of files per category (Bass Drum, Snare Drum...)
+// 5 - Nb of files per category (Bass Drum, Snare Drum...)
 ~soundsCategories = ~soundsNewNames.collect { |i| i.split($/)[6].split($-)[1] }; ~soundsCategories.cs;
 ~soundsCategories.do { |i, id| if (i.size==0, {~soundsNewNames[id]}).postln; }; // allows to detect a small misprint with 2 "--" in names
 // see 3 files in oberheimdmx--perc folder https://github.com/ritchse/tidal-drum-machines/tree/main/machines/OberheimDMX/oberheimdmx--perc/Timbale H.wav
@@ -139,23 +139,25 @@ ________________________________________________________________________________
 ~categoriesOrder = ~categoriesSizes.copy.order.reverse;
 ~categoriesOrder.do { |i, id| (~categories[i]+'-->'+~categoriesSizes[i]).postln }; // Names of categories with Nb of sound files - sorted XXX
 
-sd --> 446
-bd --> 420
-perc --> 330
-lt --> 150
-misc --> 130
-ht --> 123
-hh --> 120
-mt --> 113
-oh --> 102
-cr --> 100
-rim --> 59
-rd --> 59
-cp --> 57
-sh --> 52
-cb --> 49
-tb --> 32
-fx --> 6
+~newCategories = ["DE", "DP", "DB", "DU", "DB", "DI"];
+
+DS   -> sd --> 446
+DB   -> bd --> 420
+DP   -> perc --> 330
+DT   -> lt --> 150
+DM   -> misc --> 130
+DS   -> ht --> 123
+DS   -> hh --> 120
+DS   -> mt --> 113
+DS   -> oh --> 102
+DS   -> cr --> 100
+DS   -> rim --> 59
+DS   -> rd --> 59
+DS   -> cp --> 57
+DS   -> sh --> 52
+DS   -> cb --> 49
+DS   -> tb --> 32
+DS   -> fx --> 6
 
 
 
@@ -169,24 +171,189 @@ ________________________________________________________________________________
 
 // Put and sort remaned sound files into specific categories
 
-// 1 - First create a folder with categories
+// 6 - First create a folder with categories
 ~categoriesS = ~categories.asString.replace("[", "{"); ~categoriesS = ~categoriesS.asString.replace("]", "}"); ~categoriesS = ~categoriesS.asString.replace(" ", "");
 // mkdir -p Niveau1/{Niveau2a,Niveau2b}
-// Change "FolderSorted" with the desired folder name
-("mkdir -p" + Platform.userHomeDir ++ "/Desktop/FolderSorted/"++~categoriesS).unixCmd;
+// Change "DrumMachines" with the desired folder name
+("mkdir -p" + Platform.userHomeDir ++ "/Desktop/DrumMachines/"++~categoriesS).unixCmd;
 
-// 2 - Move files into specific categories
+// 7 - Move files into specific categories
 ~soundsFolder = "/Users/xon/tidal-drum-machines2/machines/"; // Define the path of the modified sounds folder
 ~soundsFiles = pathMatch(~soundsFolder++"*/*/*");
 (
 {
 	~soundsFiles.do { |i, id| var unixString;
 		var cat = (~soundsBuffers[id].asString.split($,)[4].split($/)[6].split($-)[1]);
-		unixString = ("mv" + i + Platform.userHomeDir ++ "/Desktop/FolderSorted/" ++ cat ++ "/");
+		unixString = ("mv" + i + Platform.userHomeDir ++ "/Desktop/DrumMachines/" ++ cat ++ "/");
 		unixString.unixCmd; unixString.postln;
-		// ex in terminal : mv /Users/xon/tidal-drum-machines2/machines/AJKPercusyn/ajkpercusyn-bd/AJKPercusyn-bd-Bassdrum.wav /Users/xon/Desktop/FolderSorted/bd/
+		// ex in terminal : mv /Users/xon/tidal-drum-machines2/machines/AJKPercusyn/ajkpercusyn-bd/AJKPercusyn-bd-Bassdrum.wav /Users/xon/Desktop/DrumMachines/bd/
 		0.001.wait;
 }}.fork;
+)
+
+
+
+
+
+_____________________________________________________________________________________________________________________
+
+( // 8 -> Initialize Arrays to load, read and get info on files with new names and sorted
+s.options.numBuffers_(100000);
+~soundsFolder = "/Users/xon/Desktop/DrumMachines/"; // Define the path of the sounds Folder
+~soundsFiles = pathMatch(~soundsFolder++"*/*");
+~soundsBuffers = 0 !~soundsFiles.size;
+~soundsNumFrames = 0 !~soundsFiles.size;
+~soundsNumChannels = 0 !~soundsFiles.size;
+~soundsFirstFrameL = 0 !~soundsFiles.size;
+~soundsFirstFrameR = 0 !~soundsFiles.size;
+~soundsLastFrameL = 0 !~soundsFiles.size;
+~soundsLastFrameR = 0 !~soundsFiles.size;
+
+s.waitForBoot {
+	{ var sf;
+		~soundsFiles.do { |i, id| i.postln;
+			sf = SoundFile.new; sf.openRead(i); // optional ?
+			~soundsBuffers[id] = Buffer.read(s, i);
+			sf.close; // optional ?
+			0.001.wait;
+			if (id % 10 == 9, {  // adjust - here every 10th file
+				// "breathing".postln;
+				0.01.wait; s.sync;
+				// can even add tiny .wait here but only if desperately needed
+			});
+		};
+	}.fork;
+}
+)
+
+
+( // 9 -> Get the values of the first and last samples to detect clicks on left and right channels (multichannel buffers interleave their samples)
+{ // Raw attempt that does not really work
+	~soundsBuffers.do { |i, id| // i.postln;
+		~soundsNumFrames[id] = i.numFrames;
+		~soundsNumChannels[id] = i.numChannels;
+		if (~soundsNumChannels[id] == 1, {
+			i.get(0, {|msg| ~soundsFirstFrameL[id] = msg.postln}); // 1st left
+			i.get(~soundsNumFrames[id]-1, {|msg| ~soundsLastFrameL[id] = msg.postln}); // Last left
+			~soundsFirstFrameR[id] = nil; ~soundsLastFrameR[id] = nil;
+		},{
+			i.get(0, {|msg| ~soundsFirstFrameL[id] = msg.postln}); // 1st left
+			i.get(~soundsNumFrames[id]-2, {|msg| ~soundsLastFrameL[id] = msg.postln}); // Last left
+			i.get(1, {|msg| ~soundsFirstFrameR[id] = msg.postln}); // 1st right
+			i.get(~soundsNumFrames[id]-1, {|msg| ~soundsLastFrameR[id] = msg.postln}); // Last right
+		});
+		0.001.wait; // s.sync;
+	};
+}.fork;
+)
+
+~soundsFirstFrameL.cs;
+~soundsLastFrameL.cs;
+
+
+( // 10a -> Identify Buffers to detect clicks over a certain threshold at 1st sample on links or right channel
+{ // Raw attempt that does not really work
+	~soundsBuffersWithClicks1 = List.new;
+	~soundsBuffersWithClicksFirstFrameL = List.new;
+	~soundsBuffersWithClicksFirstFrameR = List.new;
+	~soundsBuffers.do { |i, id| var thresh = 0.01; // i.postln;
+		if (~soundsNumChannels[id] == 1, {
+			if (~soundsFirstFrameL[id].abs >= thresh, {
+				i.asString.postln; ~soundsFirstFrameL[id].round(0.001).postln;
+				~soundsBuffersWithClicks1.add(i);
+				~soundsBuffersWithClicksFirstFrameL.add(~soundsFirstFrameL[id]);
+
+				// To copy (cp) or move (mv) the files to a new folder to batch fade in and out the files
+				// ("cp" + ~soundsFiles[id] + "/Users/xon/Desktop/NewFolder/").unixCmd
+			});
+		},{
+			if (~soundsFirstFrameL[id].abs >= thresh or:{~soundsFirstFrameR[id].abs >= thresh}, {
+				i.asString.postln; ~soundsFirstFrameL[id].round(0.001).postln; ~soundsFirstFrameR[id].round(0.001).postln;
+				~soundsBuffersWithClicks1.add(i);
+				~soundsBuffersWithClicksFirstFrameL.add(~soundsFirstFrameL[id]); ~soundsBuffersWithClicksFirstFrameR.add(~soundsFirstFrameR[id]);
+
+				// ("cp" + ~soundsFiles[id] + "/Users/xon/Desktop/ToFade/").unixCmd
+			});
+		});
+		0.0001.wait;
+	};
+}.fork;
+)
+
+~nb = 0; ~soundsBuffersWithClicks1[~nb].play(mul:0.5); ~soundsBuffersWithClicks1[~nb];
+~soundsBuffersWithClicks1.size;
+>= 0.1 -> 128 // only on left channel
+>= 0.05 -> 172 // only on left channel
+>= 0.01 -> 516 // only on left channel
+>= 0.001 -> 1064 // only on left channel
+>= 0.0001 -> 1838 // only on left channel
+>= 0.1 -> 129 // on all channels
+>= 0.05 -> 174 // on all channels
+>= 0.01 -> 519 // on all channels
+
+
+( // 10b -> Identify Buffers to detect clicks over a certain threshold at last sample on links or right channel
+{ // Raw attempt that does not really work
+	~soundsBuffersWithClicks2 = List.new;
+	~soundsBuffersWithClicksLastFrameL = List.new;
+	~soundsBuffersWithClicksLastFrameR = List.new;
+	~soundsBuffers.do { |i, id| var thresh = 0.01; // i.postln;
+		if (~soundsNumChannels[id] == 1, {
+			if (~soundsLastFrameL[id].abs >= thresh, {
+				i.asString.postln; ~soundsLastFrameL[id].round(0.001).postln;
+				~soundsBuffersWithClicks2.add(i);
+				~soundsBuffersWithClicksLastFrameL.add(~soundsLastFrameL[id]);
+
+				// To copy (cp) or move (mv) the files to a new folder to batch fade in and out the files
+				// ("cp" + ~soundsFiles[id] + "/Users/xon/Desktop/NewFolder/").unixCmd
+			});
+		},{
+			if (~soundsLastFrameL[id].abs >= thresh or:{~soundsLastFrameR[id].abs >= thresh}, {
+				i.asString.postln; ~soundsLastFrameL[id].round(0.001).postln; ~soundsLastFrameR[id].round(0.001).postln;
+				~soundsBuffersWithClicks2.add(i);
+				~soundsBuffersWithClicksLastFrameL.add(~soundsLastFrameL[id]); ~soundsBuffersWithClicksLastFrameR.add(~soundsLastFrameR[id]);
+
+				// ("cp" + ~soundsFiles[id] + "/Users/xon/Desktop/ToFade/").unixCmd
+			});
+		});
+		0.0001.wait;
+	};
+}.fork;
+)
+
+~nb = 0; ~soundsBuffersWithClicks2[~nb].play(mul:1); ~soundsBuffersWithClicks2[~nb].postln; ("Last L -> "++~soundsBuffersWithClicksLastFrameL[~nb].round(0.001)).postln; if (~soundsBuffersWithClicksLastFrameR[~nb].notNil, {("Last R -> "++~soundsBuffersWithClicksLastFrameR[~nb].round(0.001))});
+~soundsBuffersWithClicks2.size;
+>= 0.1 -> 412 // only on left channel
+>= 0.05 -> 727 // only on left channel
+>= 0.01 -> 1513 // only on left channel
+>= 0.001 -> 1978 // only on left channel
+>= 0.0001 -> 2099 // only on left channel
+>= 0.1 -> 439 // on all channels
+>= 0.05 -> 806 // on all channels
+>= 0.01 -> 1633 // on all channels
+
+
+( // 11a -> Play in loop Buffers with "Clicks" at the beginning
+{
+	~soundsBuffersWithClicks1.do { |i, id| // i.postln;
+		i.play(mul:0.5); i.postln;
+		("1st L -> "++~soundsBuffersWithClicksFirstFrameL[id].round(0.001)).postln;
+		if (~soundsBuffersWithClicksFirstFrameR[id].notNil, {("1st R -> "++~soundsBuffersWithClicksFirstFrameR[id].round(0.001)).postln});
+		0.5.wait;
+	};
+}.fork;
+)
+
+
+( // 11b -> Play in loop Buffers with "Clicks" at the end
+{
+	~soundsBuffersWithClicks2.do { |i, id| // i.postln;
+		i.play(mul:0.5); i.postln;
+		("Last L -> "++~soundsBuffersWithClicksLastFrameL[id].round(0.001)).postln;
+		if (~soundsBuffersWithClicksLastFrameR[id].notNil, {("Last R -> "++~soundsBuffersWithClicksLastFrameR[id].round(0.001)).postln});
+		1.wait;
+	};
+}.fork;
 )
 
 
