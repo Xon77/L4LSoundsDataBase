@@ -1,6 +1,6 @@
 # A sound library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) !
 
-This sound library is in development to work specifically with the spatial sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life).
+This sound library is in development to work specifically with the spatial sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life). It will be the basis for my personal and collaborative future open source creations.
 
 Currently, it only gathers a huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse). It is a first try to adapt, sort, clean and fit this collection for the buffer module of the performance tool [Live 4 Life](https://github.com/Xon77/Live4Life) to get a default minimum sound folder. Other sound collections and categories will be added in the future in order to be able to play with different sound sources and associations.
 
@@ -34,23 +34,23 @@ This formatting allows in the tool new gatherings and categories between folders
 
 ### Drum categories and  abbreviations sorted by groups or families
 
-| Drum categories                     | Abbreviation | Group |  Nb of files  |
+| Group | Drum categories                     | Abbreviation |  Nb of files  |
 |-------------------------------------|:------------|:------------|-----:|
-| B - Bass drum, Kick drum                | bd          | DB          |  420 |
-| C - Snare drum                          | sd          | DC          |  446 |
-| D - Low tom                             | lt          | DD          |  150 |
-| D - Medium tom                          | mt          | DD          |  113 |
-| D - High tom                            | ht          | DD          |  123 |
-| K - Clap                                | cp          | DK          |   57 |
-| K - Rimshot                             | rim         | DK          |   59 |
-| L - Other percussions                   | perc        | DL          |  330 |
-| M - Cowbell                             | cb          | DM          |   49 |
-| M - Tambourine                          | tb          | DM          |   32 |
-| O - Closed hi-hat                       | hh          | DO          |  120 |
-| O - Open hi-hat                         | oh          | DO          |  102 |
-| S - Crash                               | cr          | DS          |  100 |
-| S - Ride                                | rd          | DS          |   59 |
-| S - Shakers (and maracas, cabasas, etc) | sh          | DS          |   52 |
-| X - Effects                             | fx          | DX          |    6 |
-| X - Miscellaneous samples               | misc        | DX          |  130 |
+| B          | Bass drum, Kick drum                | bd          |  420 |
+| C          | Snare drum                          | sd          |  446 |
+| D          | Low tom                             | lt          |  150 |
+| D          | Medium tom                          | mt          |  113 |
+| D          | High tom                            | ht          |  123 |
+| K          | Clap                                | cp          |   57 |
+| K          | Rimshot                             | rim         |   59 |
+| L          | Other percussions                   | perc        |  330 |
+| M          | Cowbell                             | cb          |   49 |
+| M          | Tambourine                          | tb          |   32 |
+| O          | Closed hi-hat                       | hh          |  120 |
+| O          | Open hi-hat                         | oh          |  102 |
+| S          | Crash                               | cr          |  100 |
+| S          | Ride                                | rd          |   59 |
+| S          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
+| X          | Effects                             | fx          |    6 |
+| X          | Miscellaneous samples               | misc        |  130 |
 | `Total`                             |              |            | `2348` |
