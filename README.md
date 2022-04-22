@@ -89,4 +89,4 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 
 GPL 3
 
-See the [License](/LICENCE.md) for more details.
+See the [License](/LICENCE) for more details.
