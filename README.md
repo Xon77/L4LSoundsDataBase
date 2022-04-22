@@ -1,4 +1,4 @@
-# A sounds library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) !
+# A sound library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) !
 
 This sound library is in development to work specifically with the spatial sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life).
 
@@ -34,23 +34,23 @@ This formatting allows in the tool new gatherings and categories between folders
 
 ### Drum groups, categories and  abbreviations sorted by Folder names
 
-| Drum groups - categories                     | Abbreviation |  Nb of files  |
+| Drum categories                     | Abbreviation || Group |  Nb of files  |
 |-------------------------------------|:------------|-----:|
-| B - Bass drum, Kick drum                | bd          |  420 |
-| C - Snare drum                          | sd          |  446 |
-| D - Low tom                             | lt          |  150 |
-| D - Medium tom                          | mt          |  113 |
-| D - High tom                            | ht          |  123 |
-| K - Clap                                | cp          |   57 |
-| K - Rimshot                             | rim         |   59 |
-| L - Other percussions                   | perc        |  330 |
-| M - Cowbell                             | cb          |   49 |
-| M - Tambourine                          | tb          |   32 |
-| O - Closed hi-hat                       | hh          |  120 |
-| O - Open hi-hat                         | oh          |  102 |
-| S - Crash                               | cr          |  100 |
-| S - Ride                                | rd          |   59 |
-| S - Shakers (and maracas, cabasas, etc) | sh          |   52 |
-| X - Effects                             | fx          |    6 |
-| X - Miscellaneous samples               | misc        |  130 |
-| `Total`                             |              | `2348` |
+| B - Bass drum, Kick drum                | bd          | bd          |  420 |
+| C - Snare drum                          | sd          | bd          |  446 |
+| D - Low tom                             | lt          | bd          |  150 |
+| D - Medium tom                          | mt          | bd          |  113 |
+| D - High tom                            | ht          | bd          |  123 |
+| K - Clap                                | cp          | bd          |   57 |
+| K - Rimshot                             | rim         | bd          |   59 |
+| L - Other percussions                   | perc        | bd          |  330 |
+| M - Cowbell                             | cb          | bd          |   49 |
+| M - Tambourine                          | tb          | bd          |   32 |
+| O - Closed hi-hat                       | hh          | bd          |  120 |
+| O - Open hi-hat                         | oh          | bd          |  102 |
+| S - Crash                               | cr          | bd          |  100 |
+| S - Ride                                | rd          | bd          |   59 |
+| S - Shakers (and maracas, cabasas, etc) | sh          | bd          |   52 |
+| X - Effects                             | fx          | bd          |    6 |
+| X - Miscellaneous samples               | misc        | bd          |  130 |
+| `Total`                             |              |            | `2348` |
