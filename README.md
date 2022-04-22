@@ -17,7 +17,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 
 ---
 
-### Building a sound library with groups or links
+### Building a sound library with groups or links for [Live 4 Life project](https://github.com/Xon77/Live4Life)
 
 As you can see below or in the [new resorted folder](/DrumMachines), each sound folder name should ideally begin and be formatted and classified by 2 letters:
 * the first letter `D` to identify a category, in this case, a specific collection drum machines,
@@ -25,7 +25,7 @@ As you can see below or in the [new resorted folder](/DrumMachines), each sound 
 
 This formatting allows in the tool new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this total collection of drums, or e.g. `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
 
-The content of each sound folder should be also ideally formatted from low to high pitches, although it has been taken into consideration, since I kept the original sort.
+The content of each sound folder should be also ideally formatted from low to high pitches, although it has not yet been taken into consideration here, since I kept the original sort.
 
 
 ---
