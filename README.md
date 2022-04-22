@@ -58,7 +58,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 | S          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
 | X          | Effects                             | fx          |    6 |
 | X          | Miscellaneous samples               | misc        |  130 |
-| `D`                             | `Total`             |            | `2348` |
+| `D-`                             | `Total`             |            | `2348` |
 
 
 ---
