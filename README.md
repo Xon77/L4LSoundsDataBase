@@ -1,4 +1,4 @@
-# A sounds library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) to come soon!
+# A sounds library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) !
 
 This sounds library is in development to work specifically with the sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life).
 
