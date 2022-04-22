@@ -4,19 +4,16 @@ This sound library is in development to work specifically with the spatial sound
 
 Currently, it only gathers a huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse). It is a first try to adapt, sort, clean and fit this collection for the buffer module of the performance tool [Live 4 Life](https://github.com/Xon77/Live4Life) to get a default minimum sound folder. Other sound collections and categories will be added in the future in order to be able to play with different sound sources and associations.
 
-In the file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), you find different code snippets e.g.: 
+---
+
+### List and sort of drum machines
+
+See the original full list of drum machines [here](https://github.com/Xon77/tidal-drum-machines/tree/main/machines), which has been mainly resorted by category [here](/DrumMachines) thanks to the code in the file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), where you find different code snippets e.g.: 
 * how to batch change sound file names by adding names of folders [here](/SoundsLibrary_Utility.scd#L44-L123), 
 * how to explore and sort this collection of sound files [by category](/SoundsLibrary_Utility.scd#L131-L187) or [by machine](/SoundsLibrary_Utility.scd#L412-L418),
 * or how to move or copy files by category into specific sound folders [here](/SoundsLibrary_Utility.scd#L199-L220).
 
 For now, the collection of sounds may have clicks over the edges. Later, I will add a new branch with faded sounds. 
-
-
----
-
-### List and sort of drum machines
-
-See the original full list of drum machines [here](https://github.com/Xon77/tidal-drum-machines/tree/main/machines), which has been mainly resorted by category [here](/DrumMachines) thanks to code links above.
 
 ---
 
@@ -32,7 +29,7 @@ This formatting allows in the tool new gatherings and categories between folders
 ---
 
 
-### Drum categories and  abbreviations sorted by groups or families
+### Drum machine categories and  abbreviations sorted by groups or families
 
 | Group | Drum categories                     | Abbreviation |  Nb of files  |
 |-------------------------------------|:------------|:------------|-----:|
