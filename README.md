@@ -53,4 +53,4 @@ This formatting allows in the tool new gatherings and categories between folders
 | S          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
 | X          | Effects                             | fx          |    6 |
 | X          | Miscellaneous samples               | misc        |  130 |
-| `Total`                             |              |            | `2348` |
+| D                             | `Total`             |            | `2348` |
