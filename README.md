@@ -22,6 +22,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 1. As you can see below or in the [new resorted folder](/DrumMachines), each sound folder name should ideally begin and be formatted and classified by 2 letters:
 	* the first letter to identify a category, in this case `D` for this specific collection of drum machines,
 	* the second letter to identify another category, colour or register within this collection.
+	
 	This formatting allows in the tool new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this total collection of drums, or e.g. `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
 
 2. Since I try to build sound folders categories with a minimum of 10 or 20 and a maximum of 100 or 200 sounds in order that the buffer module is both playable and diverse, some drum categories have been splitted in 2 or 3 like 
