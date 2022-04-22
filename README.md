@@ -6,8 +6,8 @@ Currently, it only gathers a huge collection of [Drum Machines](https://github.c
 
 In the file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), you find different code snippets: 
 * how to batch change sound file names by adding names of folders [here](/SoundsLibrary_Utility.scd#L44-L123), 
-* how to explore and sort this collection of sound files [by category](/SoundsLibrary_Utility.scd#L131-L187) or [by machine](/SoundsLibrary_Utility.scd#L406-L412),
-* or how to move or copy files by category into specific sound folders [here](/SoundsLibrary_Utility.scd#L199-L219).
+* how to explore and sort this collection of sound files [by category](/SoundsLibrary_Utility.scd#L131-L187) or [by machine](/SoundsLibrary_Utility.scd#L412-L418),
+* or how to move or copy files by category into specific sound folders [here](/SoundsLibrary_Utility.scd#L199-L220).
 
 For now, the collection of sounds may have clicks over the edges. Later, I will add a new branch with faded sounds. 
 
