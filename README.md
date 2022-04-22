@@ -19,11 +19,11 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 
 ### Building a sound library with groups or links
 
-As you can see below, each name of sounds folders should be ideally formatted and classified by 2 letters:
-* the first letter `D` to identify a specific collection, in this case, drum machines,
+As you can see below or in the new resorted folder, each name of sounds folders should be ideally formatted and classified by 2 letters:
+* the first letter `D` to identify a category, in this case, a specific collection drum machines,
 * the second letter to identify another category, colour or register within this collection.
 
-This formatting allows in the tool new gatherings and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this collection of drums, or e.g. `B` to gather bass and kick drums with other similar sounds or associations to come.
+This formatting allows in the tool new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this collection of drums, or e.g. `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
 
 
 ---
