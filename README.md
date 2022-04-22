@@ -32,9 +32,9 @@ This formatting allows in the tool new gatherings and categories between folders
 
 | Drum categories                     | Abbreviation (old->new) |  Nb of files  |
 |-------------------------------------|:------------|-----:|
-| Bass drum, Kick drum                | bd -> DB          |  420 |
-| Snare drum                          | sd -> DC          |  446 |
-| Low tom                             | lt -> DD           |  150 |
+| Bass drum, Kick drum                | bd  -> DB          |  420 |
+| Snare drum                          | sd  -> DC          |  446 |
+| Low tom                             | lt  -> DD           |  150 |
 | Medium tom                          | mt -> DE           |  113 |
 | High tom                            | ht -> DF           |  123 |
 | Rimshot                             | rim -> DI          |   59 |
