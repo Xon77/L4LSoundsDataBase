@@ -62,9 +62,11 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 
 ---
 
-### Support
+### Support options
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z1C1NDP)
+
+Or
 
 <a href="https://www.patreon.com/Live4Life">
 	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
