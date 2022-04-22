@@ -204,8 +204,9 @@ ________________________________________________________________________________
 // Change "DrumMachines" with the desired folder name
 ("mkdir -p" + Platform.userHomeDir ++ "/Desktop/DrumMachines/"++~categoriesS).unixCmd;
 
+
 // 7 - Move files into specific categories
-~soundsFolder = "/Users/xon/tidal-drum-machines2/machines/"; // Define the path of the modified sounds folder
+~soundsFolder = "/Users/xon/tidal-drum-machines2/machines/"; // Define the path from the original modified sounds folder
 ~soundsFiles = pathMatch(~soundsFolder++"*/*/*");
 (
 {
@@ -217,6 +218,11 @@ ________________________________________________________________________________
 		0.001.wait;
 }}.fork;
 )
+
+
+// 7b - Change the names of folders with old abreviations to names of new categories
+~categories.do { |i, id| var unixString = ("mv" + Platform.userHomeDir ++ "/Desktop/DrumMachines/"++ i + Platform.userHomeDir ++ "/Desktop/DrumMachines/" ++ ~newCategories[id]).postln; unixString.postln; unixString.unixCmd };
+
 
 
 
