@@ -15,6 +15,8 @@ See the original full list of drum machines [here](https://github.com/Xon77/tida
 
 For now, the collection of sounds may have clicks over the edges. Later, I will add a new branch with faded sounds. 
 
+Download the package and put simply the folder [`DrumMachines`](/DrumMachines) on your desktop to use it with the spatial performance tool.
+
 ---
 
 ### My way to build and organise a sound library with groups or links for [Live 4 Life project](https://github.com/Xon77/Live4Life) :
