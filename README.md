@@ -40,7 +40,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 ### Drum machine categories and  abbreviations sorted by groups or families
 
 | Group | Drum categories                     | Abbreviation |  Nb of files  |
-|-------------------------------------|:------------|:------------|-----:|
+|:-----------------------------------:|:------------|:------------|-----:|
 | B          | Bass drum, Kick drum                | bd          |  420 |
 | C          | Snare drum                          | sd          |  446 |
 | D          | Low tom                             | lt          |  150 |
