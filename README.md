@@ -1,8 +1,12 @@
 # A sound library example sorted for [Live 4 Life project](https://github.com/Xon77/Live4Life) !
 
+<span class="badge-buymeacoffee"><a href="https://ko-fi.com/live4life" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a></span> &nbsp;&nbsp; <span class="badge-patreon"><a href="https://patreon.com/live4life" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+
 This sound library is in development to work specifically with the spatial sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life). It will be the basis for my personal and collaborative future open source creations.
 
 Currently, it only gathers a huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse). It is a first try to adapt, sort, clean and fit this collection for the buffer module of the performance tool [Live 4 Life](https://github.com/Xon77/Live4Life) to get a default minimum sound folder. Other sound collections and categories will be added in the future in order to be able to play with different sound sources and associations.
+
+Download the package and put simply the folder [`DrumMachines`](/DrumMachines) on your desktop to use it with the spatial performance tool.
 
 ---
 
@@ -14,8 +18,6 @@ See the original full list of drum machines [here](https://github.com/Xon77/tida
 * or how to move or copy files by category into specific sound folders [here](/SoundsLibrary_Utility.scd#L199-L220).
 
 For now, the collection of sounds may have clicks over the edges. Later, I will add a new branch with faded sounds. 
-
-Download the package and put simply the folder [`DrumMachines`](/DrumMachines) on your desktop to use it with the spatial performance tool.
 
 ---
 
