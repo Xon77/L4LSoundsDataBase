@@ -9,6 +9,8 @@ In the file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), you find 
 * how to explore and sort this collection of sound files [by category](/SoundsLibrary_Utility.scd#L131-L187) or [by machine](/SoundsLibrary_Utility.scd#L406-L412),
 * or how to move or copy files by category into specific sound folders [here](/SoundsLibrary_Utility.scd#L199-L219).
 
+For now, the collection of sounds may have clicks over the edges. I will add a new branch with faded sounds. 
+
 
 ---
 
