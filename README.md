@@ -14,7 +14,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 
 ---
 
-### List of drum machines
+### List and sort of drum machines
 
 See the original full list of drum machines [here](https://github.com/Xon77/tidal-drum-machines/tree/main/machines), which has been resorted by category [here](/DrumMachines) thanks to code links above.
 
