@@ -35,7 +35,7 @@ This formatting allows in the tool new gatherings and categories between folders
 ### Drum groups, categories and  abbreviations sorted by Folder names
 
 | Drum categories                     | Abbreviation || Group |  Nb of files  |
-|-------------------------------------|:------------|-----:|
+|-------------------------------------|:------------|:------------|-----:|
 | B - Bass drum, Kick drum                | bd          | bd          |  420 |
 | C - Snare drum                          | sd          | bd          |  446 |
 | D - Low tom                             | lt          | bd          |  150 |
