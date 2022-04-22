@@ -88,3 +88,5 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 ### License
 
 GPL 3
+
+See the [License](/LICENSE) for more details.
