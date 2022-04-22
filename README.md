@@ -30,23 +30,23 @@ This formatting allows in the tool new gatherings and categories between folders
 
 ### Drum groups, categories and  abbreviations sorted by Folder names
 
-| Drum groups and categories                     | Abbreviation |  Nb of files  |
+| Drum groups - categories                     | Abbreviation |  Nb of files  |
 |-------------------------------------|:------------|-----:|
 | B - Bass drum, Kick drum                | bd          |  420 |
-| Snare drum                          | sd -> DC          |  446 |
-| Low tom                             | lt -> DD           |  150 |
-| Medium tom                          | mt -> DE           |  113 |
-| High tom                            | ht -> DF           |  123 |
-| Rimshot                             | rim -> DI          |   59 |
-| Clap                                | cp -> DK           |   57 |
-| Other percussions                   | perc -> DL         |  330 |
-| Cowbell                             | cb -> DM           |   49 |
-| Tambourine                          | tb -> DN           |   32 |
-| Closed hi-hat                       | hh -> DO           |  120 |
-| Open hi-hat                         | oh -> DP           |  102 |
-| Crash                               | cr -> DQ           |  100 |
-| Ride                                | rd -> DR           |   59 |
-| Shakers (and maracas, cabasas, etc) | sh -> DS           |   52 |
-| Effects                             | fx -> DX           |    6 |
-| Miscellaneous samples               | misc -> DZ         |  130 |
+| C - Snare drum                          | sd          |  446 |
+| D - Low tom                             | lt          |  150 |
+| D - Medium tom                          | mt          |  113 |
+| D - High tom                            | ht          |  123 |
+| K - Clap                                | cp          |   57 |
+| K - Rimshot                             | rim         |   59 |
+| L - Other percussions                   | perc        |  330 |
+| M - Cowbell                             | cb          |   49 |
+| M - Tambourine                          | tb          |   32 |
+| O - Closed hi-hat                       | hh          |  120 |
+| O - Open hi-hat                         | oh          |  102 |
+| S - Crash                               | cr          |  100 |
+| S - Ride                                | rd          |   59 |
+| S - Shakers (and maracas, cabasas, etc) | sh          |   52 |
+| X - Effects                             | fx          |    6 |
+| X - Miscellaneous samples               | misc        |  130 |
 | `Total`                             |              | `2348` |
