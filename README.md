@@ -5,14 +5,14 @@
 This sound library, which is in development to work specifically with the spatial sound performance tool [Live 4 Life](https://github.com/Xon77/Live4Life), will be the basis for my personal and collaborative future open source creations. It is a first try to adapt, sort, clean and fit this collection for the buffer module of the performance tool [Live 4 Life](https://github.com/Xon77/Live4Life) to get a default minimum sound folder. Other sound collections and categories will be added in the future in order to be able to play with different sound sources and associations.
 
 Currently, it gathers:
-1. a huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse),
+1. a collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse),
 2. a selection from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples).
 
 Download the package and put simply the folder [`SoundFolder`](/SoundFolder) on your desktop to use it with the spatial performance tool.
 
 ---
 
-### List and sort of drum machines
+### List and sort of drum machines from [Renzo Torr](https://github.com/ritchse)
 
 See the original full list of drum machines [here](https://github.com/Xon77/tidal-drum-machines/tree/main/machines), which has been mainly resorted by category [here](/DrumMachines) thanks to the code in the file [`SoundsLibrary_Utility.scd`](/SoundsLibrary_Utility.scd), where you find different code snippets e.g.: 
 * how to batch change sound file names by adding names of folders [here](/SoundsLibrary_Utility.scd#L44-L123), 
@@ -25,7 +25,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 
 ### My way to build and organise a sound library with groups or links for [Live 4 Life project](https://github.com/Xon77/Live4Life) :
 
-1. As you can see below or in the [new resorted folder](/DrumMachines), each sound folder name should ideally begin and be formatted and classified by 2 letters:
+1. As you can see below or in the [new resorted folder](/SoundFolder), each sound folder name should ideally begin and be formatted and classified by 2 letters:
 	* the first letter to identify a category, in this case `D` for this specific collection of drum machines,
 	* the second letter to identify another category, colour or register within this collection.
 	
@@ -70,6 +70,7 @@ Once you've organized your sound folder, you should not change its structure, be
 ### Credits
 
 [Renzo Torr](https://github.com/ritchse) for its huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines).
+[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples)
 
 ---
 
