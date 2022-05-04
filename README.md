@@ -87,8 +87,11 @@ Once you've organized your sound folder, you should not change its structure, be
 
 ---
 
+<!--
+Deleted
 ### License
 
 GPL 3
 
 See the [License](/LICENSE) for more details.
+-->
