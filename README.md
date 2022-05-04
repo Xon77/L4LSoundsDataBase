@@ -41,9 +41,9 @@ Once you've organized your sound folder, you should not change its structure, be
 ---
 
 
-### Drum machine categories and  abbreviations sorted by groups or families
+### Sound categories and abbreviations sorted by groups or families
 
-| Group | Drum categories                     | Abbreviation |  Nb of files  |
+| Group | categories                     | Abbreviation |  Nb of files  |
 |:-----------------------------------:|:------------|:------------|-----:|
 | DB          | Bass drum, Kick drum                | bd          |  420 |
 | DC          | Snare drum                          | sd          |  446 |
@@ -62,7 +62,10 @@ Once you've organized your sound folder, you should not change its structure, be
 | DS          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
 | DX          | Effects                             | fx          |    6 |
 | DX          | Miscellaneous samples               | misc        |  130 |
-| `D-`                             | `Sub-Total DrumMachines`             |            | `2348` |
+| `D-`        | `Sub-Total DrumMachines`            |            | `2348` |
+| TA          | Amen Break Loop                | bd          |  34 |
+| `T-`        | `Sub-Total Dirt Sounds for Tidal`            |            | `?` |
+| `All`        | `Total`            |            | `?` |
 
 
 ---
