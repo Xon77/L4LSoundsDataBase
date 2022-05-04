@@ -43,24 +43,24 @@ Once you've organized your sound folder, you should not change its structure, be
 
 | Group | Drum categories                     | Abbreviation |  Nb of files  |
 |:-----------------------------------:|:------------|:------------|-----:|
-| B          | Bass drum, Kick drum                | bd          |  420 |
-| C          | Snare drum                          | sd          |  446 |
-| D          | Low tom                             | lt          |  150 |
-| D          | Medium tom                          | mt          |  113 |
-| D          | High tom                            | ht          |  123 |
-| K          | Clap                                | cp          |   57 |
-| K          | Rimshot                             | rim         |   59 |
-| L          | Other percussions                   | perc        |  330 |
-| M          | Cowbell                             | cb          |   49 |
-| M          | Tambourine                          | tb          |   32 |
-| O          | Closed hi-hat                       | hh          |  120 |
-| O          | Open hi-hat                         | oh          |  102 |
-| S          | Crash                               | cr          |  100 |
-| S          | Ride                                | rd          |   59 |
-| S          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
-| X          | Effects                             | fx          |    6 |
-| X          | Miscellaneous samples               | misc        |  130 |
-| `D-`                             | `Total`             |            | `2348` |
+| DB          | Bass drum, Kick drum                | bd          |  420 |
+| DC          | Snare drum                          | sd          |  446 |
+| DD          | Low tom                             | lt          |  150 |
+| DD          | Medium tom                          | mt          |  113 |
+| DD          | High tom                            | ht          |  123 |
+| DK          | Clap                                | cp          |   57 |
+| DK          | Rimshot                             | rim         |   59 |
+| DL          | Other percussions                   | perc        |  330 |
+| DM          | Cowbell                             | cb          |   49 |
+| DM          | Tambourine                          | tb          |   32 |
+| DO          | Closed hi-hat                       | hh          |  120 |
+| DO          | Open hi-hat                         | oh          |  102 |
+| DS          | Crash                               | cr          |  100 |
+| DS          | Ride                                | rd          |   59 |
+| DS          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
+| DX          | Effects                             | fx          |    6 |
+| DX          | Miscellaneous samples               | misc        |  130 |
+| `D-`                             | `Sub-Total DrumMachines`             |            | `2348` |
 
 
 ---
@@ -87,8 +87,11 @@ Once you've organized your sound folder, you should not change its structure, be
 
 ---
 
+<!--
+Deleted
 ### License
 
 GPL 3
 
 See the [License](/LICENSE) for more details.
+-->
