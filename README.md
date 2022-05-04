@@ -70,7 +70,8 @@ Once you've organized your sound folder, you should not change its structure, be
 ### Credits
 
 [Renzo Torr](https://github.com/ritchse) for its huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines).
-[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples)
+
+[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples).
 
 ---
 
