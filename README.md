@@ -26,7 +26,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 ### My way to build and organise a sound library with groups or links for [Live 4 Life project](https://github.com/Xon77/Live4Life) :
 
 1. As you can see below or in the [new resorted folder](/SoundFolder), each sound folder name should ideally begin and be formatted and classified by 2 letters:
-	* the first letter to identify a category, in this case `D` for the specific collection of drum machines from [Renzo Torr](https://github.com/ritchse),
+	* the first letter to identify a category, e.g. `D` for the specific collection of drum machines from [Renzo Torr](https://github.com/ritchse),
 	* the second letter to identify another category, colour or register within this collection.
 	
 	This formatting allows to have in the tool new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this total collection of drums, the second letter `D` for all toms, or `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
