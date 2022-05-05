@@ -52,9 +52,9 @@ Once you've organized your sound folder, you should not change its structure, be
 | DD          | High tom                            | ht          |  123 |
 | DK          | Clap                                | cp          |   57 |
 | DK          | Rimshot                             | rim         |   59 |
-| DL          | Other percussions                   | perc        |  330 |
-| DM          | Cowbell                             | cb          |   49 |
-| DM          | Tambourine                          | tb          |   32 |
+| DM          | Other percussions                   | perc        |  330 |
+| DN          | Cowbell                             | cb          |   49 |
+| DN          | Tambourine                          | tb          |   32 |
 | DO          | Closed hi-hat                       | hh          |  120 |
 | DO          | Open hi-hat                         | oh          |  102 |
 | DS          | Crash                               | cr          |  100 |
@@ -65,8 +65,9 @@ Once you've organized your sound folder, you should not change its structure, be
 | `D-`        | `Sub-Total DrumMachines`            |            | `2348` |
 | TA          | Amen Break Loop and cutups          | -          |  34 |
 | TL          | Other whole Loops	            | -          |  ? |
+| TV          | Voice (Alphabet & others)           | -          |  ? |
 | `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
-| `**All**`        | `Total`            |            | `?` |
+| **`All`**        | `Total`            |            | `?` |
 
 
 ---
