@@ -6,7 +6,7 @@ This sound library, which is in development to work specifically with the spatia
 
 Currently, it gathers:
 1. a collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse),
-2. a selection from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples).
+2. a selection (to come) from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples).
 
 Download the package and put simply the folder [`SoundFolder`](/SoundFolder) on your desktop to use it with the spatial performance tool.
 
@@ -26,7 +26,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 ### My way to build and organise a sound library with groups or links for [Live 4 Life project](https://github.com/Xon77/Live4Life) :
 
 1. As you can see below or in the [new resorted folder](/SoundFolder), each sound folder name should ideally begin and be formatted and classified by 2 letters:
-	* the first letter to identify a category, in this case `D` for this specific collection of drum machines,
+	* the first letter to identify a category, e.g. `D` for the specific collection of drum machines from [Renzo Torr](https://github.com/ritchse),
 	* the second letter to identify another category, colour or register within this collection.
 	
 	This formatting allows to have in the tool new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this total collection of drums, the second letter `D` for all toms, or `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
@@ -41,9 +41,9 @@ Once you've organized your sound folder, you should not change its structure, be
 ---
 
 
-### Drum machine categories and  abbreviations sorted by groups or families
+### Sound categories and abbreviations sorted by groups or families
 
-| Group | Drum categories                     | Abbreviation |  Nb of files  |
+| Group | categories                     | Abbreviation |  Nb of files  |
 |:-----------------------------------:|:------------|:------------|-----:|
 | DB          | Bass drum, Kick drum                | bd          |  420 |
 | DC          | Snare drum                          | sd          |  446 |
@@ -52,9 +52,9 @@ Once you've organized your sound folder, you should not change its structure, be
 | DD          | High tom                            | ht          |  123 |
 | DK          | Clap                                | cp          |   57 |
 | DK          | Rimshot                             | rim         |   59 |
-| DL          | Other percussions                   | perc        |  330 |
-| DM          | Cowbell                             | cb          |   49 |
-| DM          | Tambourine                          | tb          |   32 |
+| DM          | Other percussions                   | perc        |  330 |
+| DN          | Cowbell                             | cb          |   49 |
+| DN          | Tambourine                          | tb          |   32 |
 | DO          | Closed hi-hat                       | hh          |  120 |
 | DO          | Open hi-hat                         | oh          |  102 |
 | DS          | Crash                               | cr          |  100 |
@@ -62,7 +62,12 @@ Once you've organized your sound folder, you should not change its structure, be
 | DS          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
 | DX          | Effects                             | fx          |    6 |
 | DX          | Miscellaneous samples               | misc        |  130 |
-| `D-`                             | `Sub-Total DrumMachines`             |            | `2348` |
+| `D-`        | `Sub-Total DrumMachines`            |            | `2348` |
+| TA          | Amen Break Loop and cutups          | -          |  34 |
+| TL          | Other whole Loops	            | -          |  ? |
+| TV          | Voice (Alphabet & others)           | -          |  ? |
+| `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
+| **`All`**        | `Total`            |            | `?` |
 
 
 ---
@@ -70,7 +75,8 @@ Once you've organized your sound folder, you should not change its structure, be
 ### Credits
 
 [Renzo Torr](https://github.com/ritchse) for its huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines).
-[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples)
+
+[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples).
 
 ---
 
@@ -86,7 +92,6 @@ Once you've organized your sound folder, you should not change its structure, be
 <!--
 [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DLive4Life%26type%3Dpatrons&style=for-the-badge)](https://patreon.com/Live4Life)
 -->
-
 
 ---
 
