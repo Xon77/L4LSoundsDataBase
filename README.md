@@ -63,9 +63,10 @@ Once you've organized your sound folder, you should not change its structure, be
 | DX          | Effects                             | fx          |    6 |
 | DX          | Miscellaneous samples               | misc        |  130 |
 | `D-`        | `Sub-Total DrumMachines`            |            | `2348` |
-| TA          | Amen Break Loop                | bd          |  34 |
-| `T-`        | `Sub-Total Dirt Sounds for Tidal`            |            | `?` |
-| `All`        | `Total`            |            | `?` |
+| TA          | Amen Break Loop and cutups          | -          |  34 |
+| TL          | Other whole Loops	            | -          |  ? |
+| `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
+| `**All**`        | `Total`            |            | `?` |
 
 
 ---
@@ -90,8 +91,6 @@ Once you've organized your sound folder, you should not change its structure, be
 <!--
 [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DLive4Life%26type%3Dpatrons&style=for-the-badge)](https://patreon.com/Live4Life)
 -->
-
-<span style="color: red;">text</span>
 
 ---
 
