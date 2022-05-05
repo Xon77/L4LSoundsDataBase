@@ -60,6 +60,7 @@ s.reboot;
 ~soundsFiles.cs;
 )
 
+// /Users/xon/tidal-drum-machines2/machines/RolandJD990/rolandjd990-sd/RolandJD990-sd-90's-sd.wav
 
 ( // 2 -> Read the files with old names
 { var sf;
@@ -137,7 +138,7 @@ ________________________________________________________________________________
 ~categoriesSizes = ~categories.collect {|i, id| ~soundsCategories.occurrencesOf(i) }; // Nb of sound files per category
 
 // New categories sorted "according to me" by category, color, register (low->high)
-~newCategories = ["DM", "DL", "DB", "DE", "DR", "DN", "DX", "DK", "DZ", "DQ", "DP", "DS", "DD", "DO", "DF", "DC", "DI"];
+~newCategories = ["DN", "DM", "DB", "DE", "DR", "DN", "DX", "DK", "DZ", "DQ", "DP", "DS", "DD", "DO", "DF", "DC", "DI"];
 
 // Names of categories with Nb of sound files - not sorted XXX
 ~categories.do {|i, id| (~newCategories[id] + i + "-->" + ~categoriesSizes[id]).postln };
@@ -148,7 +149,7 @@ ________________________________________________________________________________
 
 DC sd --> 446
 DB bd --> 420
-DL perc --> 330
+DM perc --> 330
 DD lt --> 150
 DZ misc --> 130
 DF ht --> 123
@@ -160,7 +161,7 @@ DI rim --> 59
 DR rd --> 59
 DK cp --> 57
 DS sh --> 52
-DM cb --> 49
+DN cb --> 49
 DN tb --> 32
 DX fx --> 6
 
@@ -175,8 +176,8 @@ DE mt --> 113
 DF ht --> 123
 DI rim --> 59
 DK cp --> 57
-DL perc --> 330
-DM cb --> 49
+DM perc --> 330
+DN cb --> 49
 DN tb --> 32
 DO hh --> 120
 DP oh --> 102
