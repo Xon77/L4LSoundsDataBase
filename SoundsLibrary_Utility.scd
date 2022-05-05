@@ -60,7 +60,6 @@ s.reboot;
 ~soundsFiles.cs;
 )
 
-// /Users/xon/tidal-drum-machines2/machines/RolandJD990/rolandjd990-sd/RolandJD990-sd-90's-sd.wav
 
 ( // 2 -> Read the files with old names
 { var sf;
@@ -219,6 +218,9 @@ ________________________________________________________________________________
 		0.001.wait;
 }}.fork;
 )
+
+// Still, the following file has not been moved, probably because ', and has to be moved manually
+// /Users/xon/tidal-drum-machines2/machines/RolandJD990/rolandjd990-sd/RolandJD990-sd-90's-sd.wav
 
 
 // 7b - Change the names of folders with old abreviations to names of new categories
