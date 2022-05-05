@@ -63,9 +63,10 @@ Once you've organized your sound folder, you should not change its structure, be
 | DX          | Effects                             | fx          |    6 |
 | DX          | Miscellaneous samples               | misc        |  130 |
 | `D-`        | `Sub-Total DrumMachines`            |            | `2348` |
-| TA          | Amen Break Loop and cutups          | -          |  34 |
-| TL          | Other whole Loops	            | -          |  ? |
-| TV          | Voice (Alphabet & others)           | -          |  ? |
+| TA          | Amen Break Loop and cutups          | -          |  33 |
+| TB          | Bass drum, Kick drum	            | bd         |  ?  |
+| TL          | Other whole Loops	            | -          |  29 |
+| TV          | Voice (Alphabet & others)           | -          |  27 |
 | `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
 | **`All`**        | `Total`            |            | `?` |
 
