@@ -31,7 +31,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 	
 	This formatting allows to have in the tool new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this total collection of drums, the second letter `D` for all toms, or `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
 
-2. Since I try to build sound folders with a minimum of 10 or 20 and a maximum of 100 or 200 sounds in order that the buffer module is both playable and diverse, some drum categories, like `B Bass drum`, `C Snare drum` and `L Other percussions`, are not gathered together with other folders, but have been splitted here in 3 by alphabetical name of drum machines (*A to R*, *Roland*, *S to Yamaha*), where *Roland* has its specific folder due to the huge number of sounds present in this category. However, it might have been better to split the folder `L Other percussions` by family (conga and others) rather than with the name of drum machines.
+2. Since I try to build sound folders with a minimum of 10 or 20 and a maximum of 100 or 200 sounds in order that the buffer module is both playable and diverse, some drum categories, like `B Bass drum`, `C Snare drum` and `L Other percussions`, are not gathered together with other folders, but have been splitted here in 3 by alphabetical name of drum machines (*A to R*, *Roland*, *S to Yamaha*), where *Roland* has its specific folder due to the huge number of sounds present in this category. However, it might have been better to split  some folders, like `L Other percussions` by family (conga and others...), or `B` by separating Bass drum and Kick drum rather than with the name of drum machines.
 
 3. The content of each sound folder should be also ideally sorted in a specific way, e.g. from low to high pitches, although it has not yet been taken into consideration here, since I kept the original sort.
 
@@ -63,9 +63,10 @@ Once you've organized your sound folder, you should not change its structure, be
 | DX          | Effects                             | fx          |    6 |
 | DX          | Miscellaneous samples               | misc        |  130 |
 | `D-`        | `Sub-Total DrumMachines`            |            | `2348` |
-| TA          | Amen Break Loop and cutups          | -          |  34 |
-| TL          | Other whole Loops	            | -          |  ? |
-| TV          | Voice (Alphabet & others)           | -          |  ? |
+| TA          | Amen Break Loop and cutups          | -          |  33 |
+| TB          | Bass drum, Kick drum	            | bd         |  ?  |
+| TL          | Other whole Loops	            | -          |  29 |
+| TV          | Voice (Alphabet & others)           | -          |  27 |
 | `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
 | **`All`**        | `Total`            |            | `?` |
 
@@ -76,7 +77,7 @@ Once you've organized your sound folder, you should not change its structure, be
 
 [Renzo Torr](https://github.com/ritchse) for its huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines).
 
-[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples).
+[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples)...
 
 ---
 
