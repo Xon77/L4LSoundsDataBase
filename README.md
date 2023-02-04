@@ -7,7 +7,7 @@ This sound library, which is in development to work specifically with the spatia
 Currently, it gathers:
 1. a collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse),
 2. a selection (to come) from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples),
-3. A collection of Hardcore Kicks (Eigene Hardcore Kicks 2) from unknown source,
+3. a collection of Hardcore Kicks (Eigene Hardcore Kicks 2) from unknown source,
 
 Download the package and put simply the folder [`SoundFolder`](/SoundFolder) on your desktop to use it with the spatial performance tool.
 
@@ -63,7 +63,7 @@ Once you've organized your sound folder, you should not change its structure, be
 | DS          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
 | DX          | Effects                             | fx          |    6 |
 | DX          | Miscellaneous samples               | misc        |  130 |
-| `D-`        | `Sub-Total DrumMachines`            |            | `2348` |
+| `D-`        | `Sub-Total Drum Machines`           | -------------- | `2348` |
 | TA          | Amen Break Loop and cutups          | -          |  33 |
 | TB          | Bass drum, Kick drum, Gabber kick	            | bd         |  67  |
 | TC          | Snare drum	            | sd         |  52  |
@@ -71,11 +71,11 @@ Once you've organized your sound folder, you should not change its structure, be
 | TV          | Voice (Alphabet, numbers and others)           | -          |  38 |
 | TW          | Wind Instruments (Sax and others)           | -          |  22 |
 | TX          | Miscellaneous effects and glitches               | misc        |  16 |
-| `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
+| `T-`        | `Sub-Total Dirt Tidal Sounds`            | -------------- | `?` |
 | UB          | Hardcore kicks (softer)              | bd         |  76 |
 | UB          | Hardcore kicks (harder)              | bd         | 139 |
-| `U-`        | `Sub-Total Hardcore unknown kicks`   |            | 215 |
-| **`All`**        | `Total`            |            | `?` |
+| `U-`        | `Sub-Total Hardcore Unknown Kicks`   | -------------- | `215` |
+| **`All`**   | **`Total`**            | -------------- | **`?`** |
 
 
 ---
