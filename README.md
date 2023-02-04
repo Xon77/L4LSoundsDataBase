@@ -71,11 +71,11 @@ Once you've organized your sound folder, you should not change its structure, be
 | TV          | Voice (Alphabet, numbers and others)           | -          |  38 |
 | TW          | Wind Instruments (Sax and others)           | -          |  22 |
 | TX          | Miscellaneous effects and glitches               | misc        |  16 |
-| `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
+| `T-`        | `Sub-Total Dirt Tidal Sounds`            | -------------- | `?` |
 | UB          | Hardcore kicks (softer)              | bd         |  76 |
 | UB          | Hardcore kicks (harder)              | bd         | 139 |
-| `U-`        | `Sub-Total Hardcore Unknown Kicks`   |            | 215 |
-| **`All`**        | `Total`            |            | `?` |
+| `U-`        | `Sub-Total Hardcore Unknown Kicks`   | -------------- | 215 |
+| **`All`**   | `Total`            | -------------- | `?` |
 
 
 ---
