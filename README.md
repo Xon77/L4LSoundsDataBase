@@ -6,7 +6,8 @@ This sound library, which is in development to work specifically with the spatia
 
 Currently, it gathers:
 1. a collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse),
-2. a selection (to come) from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples).
+2. a selection (to come) from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples),
+3. A collection of Hard Core Kicks (Eigene Hardcore Kicks 2) from unknown source,
 
 Download the package and put simply the folder [`SoundFolder`](/SoundFolder) on your desktop to use it with the spatial performance tool.
 
@@ -67,10 +68,13 @@ Once you've organized your sound folder, you should not change its structure, be
 | TB          | Bass drum, Kick drum, Gabber kick	            | bd         |  67  |
 | TC          | Snare drum	            | sd         |  52  |
 | TL          | Other whole Loops	            | -          |  45 |
-| TV          | Voice (Alphabet, Numbers and others)           | -          |  38 |
+| TV          | Voice (Alphabet, numbers and others)           | -          |  38 |
 | TW          | Wind Instruments (Sax and others)           | -          |  22 |
 | TX          | Miscellaneous effects and glitches               | misc        |  16 |
 | `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
+| UB          | Hardcore kicks (softer)              | bd         |  76 |
+| UB          | Hardcore kicks (harder)              | bd         | 139 |
+| `U-`        | Hardcore kicks (Eigene unknown)      | bd         | 215 |
 | **`All`**        | `Total`            |            | `?` |
 
 
