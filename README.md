@@ -43,7 +43,7 @@ Once you've organized your sound folder, you should not change its structure, be
 
 ### Sound categories and abbreviations sorted by groups or families
 
-| Group | categories                     | Abbreviation |  Nb of files  |
+| Group | Categories                     | Abbreviation |  Nb of files  |
 |:-----------------------------------:|:------------|:------------|-----:|
 | DB          | Bass drum, Kick drum                | bd          |  420 |
 | DC          | Snare drum                          | sd          |  446 |
