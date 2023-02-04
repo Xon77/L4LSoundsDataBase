@@ -1,3 +1,6 @@
+// Immpacter plugin on wwise with impact and body (resonance)
+// HDR mixing
+
 // Tidal-DrumMachines SoundsFolders
 // https://club.tidalcycles.org/t/a-huge-drum-machine-library-for-tidal-71-drum-machines/3408
 // a minimal exploration from the sclang side from Julian Rohrhuber:
