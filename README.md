@@ -7,7 +7,7 @@ This sound library, which is in development to work specifically with the spatia
 Currently, it gathers:
 1. a collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse),
 2. a selection (to come) from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples),
-3. A collection of Hardcore Kicks (Eigene Hardcore Kicks 2) from unknown source,
+3. a collection of Hardcore Kicks (Eigene Hardcore Kicks 2) from unknown source,
 
 Download the package and put simply the folder [`SoundFolder`](/SoundFolder) on your desktop to use it with the spatial performance tool.
 
