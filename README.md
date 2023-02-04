@@ -63,7 +63,7 @@ Once you've organized your sound folder, you should not change its structure, be
 | DS          | Shakers (and maracas, cabasas, etc) | sh          |   52 |
 | DX          | Effects                             | fx          |    6 |
 | DX          | Miscellaneous samples               | misc        |  130 |
-| `D-`        | `Sub-Total DrumMachines`            |            | `2348` |
+| `D-`        | `Sub-Total Drum Machines`           | ----------- | `2348` |
 | TA          | Amen Break Loop and cutups          | -          |  33 |
 | TB          | Bass drum, Kick drum, Gabber kick	            | bd         |  67  |
 | TC          | Snare drum	            | sd         |  52  |
@@ -74,7 +74,7 @@ Once you've organized your sound folder, you should not change its structure, be
 | `T-`        | `Sub-Total Dirt Tidal Sounds`            |            | `?` |
 | UB          | Hardcore kicks (softer)              | bd         |  76 |
 | UB          | Hardcore kicks (harder)              | bd         | 139 |
-| `U-`        | `Sub-Total Hardcore unknown kicks`   |            | 215 |
+| `U-`        | `Sub-Total Hardcore Unknown Kicks`   |            | 215 |
 | **`All`**        | `Total`            |            | `?` |
 
 
