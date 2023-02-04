@@ -74,8 +74,8 @@ Once you've organized your sound folder, you should not change its structure, be
 | `T-`        | `Sub-Total Dirt Tidal Sounds`            | -------------- | `?` |
 | UB          | Hardcore kicks (softer)              | bd         |  76 |
 | UB          | Hardcore kicks (harder)              | bd         | 139 |
-| `U-`        | `Sub-Total Hardcore Unknown Kicks`   | -------------- | 215 |
-| **`All`**   | `Total`            | -------------- | `?` |
+| `U-`        | `Sub-Total Hardcore Unknown Kicks`   | -------------- | `215` |
+| **`All`**   | **`Total`**            | -------------- | **`?`** |
 
 
 ---
