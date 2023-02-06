@@ -7,7 +7,8 @@ This sound library, which is in development to work specifically with the spatia
 Currently, it gathers:
 1. a collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse),
 2. a selection (to come) from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples),
-3. a collection of Hardcore Kicks (Eigene Hardcore Kicks 2) from unknown source,
+3. a collection of Hardcore Kicks (Eigene Hardcore Kicks 2) downloaded free from unknown source,
+3. a collection of Hardcore sounds from [VoidVertex](https://github.com/VoidVertex/Sounds).
 
 Download the package and put simply the folder [`SoundFolder`](/SoundFolder) on your desktop to use it with the spatial performance tool.
 
@@ -75,6 +76,13 @@ Once you've organized your sound folder, you should not change its structure, be
 | UB          | Hardcore kicks (softer)              | bd         |  76 |
 | UB          | Hardcore kicks (harder)              | bd         | 139 |
 | `U-`        | `Sub-Total Hardcore Unknown Kicks`   | -------------- | `215` |
+| VA          | Amen Break Loop and cutups distorted | -          |  52 |
+| VB          | Kick drum (to change to loops?)      | bd         |  15 |
+| VG          | Guitar                               | -          |  162 |
+| VH          | Bass                                 | -          |  35 |
+| VV          | Voice and melodies                   | -          |  11 |
+| VX          | FX FM (with some kicks)              | -          |  108 |
+| `V-`        | `Sub-Total VoidVertex sounds`        | -------------- | `383` |
 | **`All`**   | **`Total`**            | -------------- | **`?`** |
 
 
@@ -84,7 +92,11 @@ Once you've organized your sound folder, you should not change its structure, be
 
 [Renzo Torr](https://github.com/ritchse) for its huge collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines).
 
-[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples)...
+[Alex McLean](https://github.com/yaxu) for its huge set of samples for [TidalCycles](https://github.com/tidalcycles/Dirt-Samples).
+
+[VoidVertex](https://github.com/VoidVertex) for its collection of [Hardcore sounds](https://github.com/VoidVertex/Sounds).
+
+And Others downloaded from unknown source.
 
 ---
 
