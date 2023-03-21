@@ -6,7 +6,7 @@ This sound library, which is in development to work specifically with the spatia
 
 Currently, it gathers:
 1. a collection of [Drum Machines](https://github.com/ritchse/tidal-drum-machines/tree/main/machines) for SuperDirt and Tidal from [Renzo Torr](https://github.com/ritchse) (begins with the 1st letter `D`),
-2. a selection (to come) from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples) (begins with the 1st letter `T`),
+2. a selection from the [set of samples used in SuperDirt and the TidalCycles](https://github.com/tidalcycles/Dirt-Samples) (begins with the 1st letter `T`),
 3. a collection of Hardcore Kicks (Eigene Hardcore Kicks 2) downloaded free from unknown source (begins with the 1st letter `U`),
 3. a collection of Hardcore sounds from [VoidVertex](https://github.com/VoidVertex/Sounds) (begins with the 1st letter `V`),
 4. A collection of my own personal pieces and modified samples, improvisations (begins with the 1st letter `Z`).
@@ -32,7 +32,7 @@ For now, the collection of sounds may have clicks over the edges. Later, I will 
 	* the first letter to identify a category, e.g. `D` for the specific collection of drum machines from [Renzo Torr](https://github.com/ritchse),
 	* the second letter to identify another category, colour or register within this collection.
 	
-	This formatting allows to have in the tool new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together this total collection of drums, the second letter `D` for all toms, or `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
+	This formatting allows to have in the tool new *virtual* folders and categories between folders, whose one of the letters is identical, e.g. the first letter `D` to gather together the whole collection of drums from [Renzo Torr](https://github.com/ritchse), the second letter `D` for all toms, or `B` to gather bass and kick drums with other similar sounds or associations with sounds with low pitches to come.
 
 2. Since I try to build sound folders with a minimum of 10 or 20 and a maximum of 100 or 200 sounds in order that the buffer module is both playable and diverse, some drum categories, like the second letter `B Bass drum`, `C Snare drum` and `M Other percussions`, are not gathered together with other folders, but have been splitted here in 3 by alphabetical name of drum machines (*A to R*, *Roland*, *S to Yamaha*), where *Roland* has its specific folder due to the huge number of sounds present in this category. However, it might have been better to split  some folders, like `M Other percussions` by family (conga and others...), or `B` by separating Bass drum and Kick drum rather than with the name of drum machines.
 
